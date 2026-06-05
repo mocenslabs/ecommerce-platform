@@ -1,0 +1,88 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Premium E-commerce Platform Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "django>=6.0.5",
+    "djangorestframework>=3.17.1",
+    "djangorestframework-simplejwt>=5.5.1",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=25.2",
+    "django-celery-beat>=2.9.0",
+    "celery>=5.6.3",
+    "redis>=7.4.0",
+    "psycopg[binary]>=3.3.4",
+    "pillow>=12.2.0",
+    "python-decouple>=3.8",
+    "gunicorn>=23.0.0",
+    "djangorestframework-stubs>=3.17.0",
+    "celery-types>=0.26.0",
+    "django-extensions>=4.1",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.0",
+    "ruff>=0.15.13",
+    "pytest>=9.0.3",
+    "pytest-django>=4.12.0",
+    "coverage>=7.14.0",
+    "factory-boy>=3.3.3",
+    "faker>=40.18.0",
+    "pre-commit>=4.6.0",
+    "pytest-cov>=7.1.0",
+]
+
+
+# =========================================================
+# BLACK
+# =========================================================
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+
+# =========================================================
+# RUFF
+# =========================================================
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+]
+
+ignore = [
+    "E501",
+    "F401",
+    "F403",
+    "F405",
+]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+# =========================================================
+# PYTEST
+# =========================================================
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+
+python_files = [
+    "tests.py",
+    "test_*.py",
+    "*_tests.py",
+]

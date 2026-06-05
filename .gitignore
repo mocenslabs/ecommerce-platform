@@ -1,0 +1,64 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*.sqlite3
+
+# Django
+
+media/
+staticfiles/
+
+# Env
+
+.env
+.env.*
+!.env.example
+
+# Venv
+
+.venv/
+venv/
+
+# Node
+
+node_modules/
+
+# Vite
+
+dist/
+
+# Docker
+
+postgres_data/
+
+# IDE
+
+.vscode/
+.idea/
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Pytest
+
+.pytest_cache/
+
+# Mypy
+
+.mypy_cache/
+
+# Ruff
+
+.ruff_cache/
+
+# Coverage
+
+htmlcov/
+.coverage
+
+# Logs
+
+*.log
