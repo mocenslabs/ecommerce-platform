@@ -18,7 +18,7 @@ User = get_user_model()
 
 def get_dashboard_stats():
     """
-    Return dashboard KPIs.
+    Return dashboard KPIs...
     """
 
     total_revenue = Order.objects.filter(
