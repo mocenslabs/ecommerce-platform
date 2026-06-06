@@ -8,6 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = config(
     "SECRET_KEY",
+    default="test-secret-key-for-ci",
 )
 
 DEBUG = config(
