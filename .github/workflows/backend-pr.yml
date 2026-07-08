@@ -1,0 +1,39 @@
+name: Backend Pull Request
+
+on:
+
+  pull_request:
+
+    branches:
+      - main
+
+jobs:
+
+  checks:
+
+    runs-on: ubuntu-latest
+
+    env:
+      SECRET_KEY: test-secret-key
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install uv
+
+      - run: uv sync
+
+      - run: uv run ruff check .
+
+      - run: uv run ruff format --check .
+
+      - run: uv run pytest
