@@ -1,6 +1,10 @@
 from django.urls import path
 
-from apps.reviews.apis import (
+from apps.reviews.apis.admin_review import (
+    AdminReviewDetailApi,
+    AdminReviewListApi,
+)
+from apps.reviews.apis.reviews import (
     ProductReviewCreateApi,
     ProductReviewDeleteApi,
     ProductReviewListApi,
@@ -27,5 +31,15 @@ urlpatterns = [
         "reviews/<uuid:pk>/delete/",
         ProductReviewDeleteApi.as_view(),
         name="delete-product-review",
+    ),
+    path(
+        "admin/",
+        AdminReviewListApi.as_view(),
+        name="admin-review-list",
+    ),
+    path(
+        "admin/<uuid:pk>/",
+        AdminReviewDetailApi.as_view(),
+        name="admin-review-detail",
     ),
 ]

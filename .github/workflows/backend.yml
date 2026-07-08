@@ -53,8 +53,5 @@ jobs:
       - name: Ruff format
         run: uv run ruff format --check .
 
-      - name: Run tests
-        run: uv run pytest
-
       - name: Coverage report
         run: uv run pytest --cov --cov-report=term-missing

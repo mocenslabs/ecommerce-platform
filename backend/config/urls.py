@@ -29,7 +29,13 @@ urlpatterns = [
         ),
     ),
     path(
-        "api/v1/",
+        "api/v1/users/",
+        include(
+            "apps.users.urls",
+        ),
+    ),
+    path(
+        "api/v1/orders/",
         include("apps.orders.urls"),
     ),
     path(
@@ -42,6 +48,12 @@ urlpatterns = [
         "api/v1/catalog/",
         include(
             "apps.catalog.urls",
+        ),
+    ),
+    path(
+        "api/v1/inventory/",
+        include(
+            "apps.inventory.urls",
         ),
     ),
     path(
@@ -67,9 +79,21 @@ urlpatterns = [
         ),
     ),
     path(
+        "api/v1/discounts/",
+        include(
+            "apps.discounts.urls",
+        ),
+    ),
+    path(
         "api/v1/core/",
         include(
             "apps.core.urls",
+        ),
+    ),
+    path(
+        "api/v1/cart/",
+        include(
+            "apps.cart.urls",
         ),
     ),
 ]

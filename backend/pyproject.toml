@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 
 dependencies = [
-    "django>=6.0.5",
+    "django>=6.0.6",
+    "PyJWT>=2.13.0",
     "djangorestframework>=3.17.1",
     "djangorestframework-simplejwt>=5.5.1",
     "django-cors-headers>=4.9.0",
@@ -33,6 +34,7 @@ dev = [
     "faker>=40.18.0",
     "pre-commit>=4.6.0",
     "pytest-cov>=7.1.0",
+    "pip-audit>=2.9.0",
 ]
 
 

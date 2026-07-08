@@ -75,22 +75,4 @@ def update_order_status(
         },
     )
 
-    if new_status == OrderStatus.PAID:
-        from apps.core.events.dispatcher import (
-            dispatch_event,
-        )
-        from apps.orders.events import (
-            OrderPaidEvent,
-        )
-
-        dispatch_event(
-            OrderPaidEvent(
-                payload={
-                    "order_id": str(
-                        order.order_id,
-                    ),
-                },
-            ),
-        )
-
     return order

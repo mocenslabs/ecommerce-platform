@@ -1,7 +1,10 @@
 from django.db import transaction
 
-from apps.inventory.models import (
-    Inventory,
+from apps.inventory.constants import (
+    InventoryReservationStatus,
+)
+from apps.inventory.services.reservation_lifecycle import (
+    consume_reservation,
 )
 
 
@@ -15,24 +18,10 @@ def confirm_inventory_reservations(
     """
 
     reservations = order.inventory_reservations.filter(
-        confirmed=False,
+        status=InventoryReservationStatus.ACTIVE,
     )
 
     for reservation in reservations:
-        inventory = Inventory.objects.select_for_update().get(
-            variant=reservation.variant,
-        )
-
-        inventory.reserved_quantity -= reservation.quantity
-
-        inventory.quantity -= reservation.quantity
-
-        inventory.save()
-
-        reservation.confirmed = True
-
-        reservation.save(
-            update_fields=[
-                "confirmed",
-            ],
+        consume_reservation(
+            reservation,
         )

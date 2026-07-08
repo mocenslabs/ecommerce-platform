@@ -3,14 +3,34 @@ import uuid
 from django.db import models
 
 from apps.core.models import BaseModel
+from apps.inventory.constants import (
+    InventoryReservationStatus,
+)
 
 
 class InventoryReservation(BaseModel):
     """
-    Temporary inventory reservation during checkout flow.
+    Temporary inventory reservation.
 
-    Reservations help prevent overselling while users
-    complete payment processing.
+    Reservations are created during checkout to prevent
+    overselling while the customer completes payment.
+
+    Lifecycle:
+
+    ACTIVE
+        Reservation currently holding stock.
+
+    CONSUMED
+        Reservation converted into a completed sale.
+
+    RELEASED
+        Reservation manually released.
+
+    EXPIRED
+        Reservation automatically expired.
+
+    PENDING
+        Reservation created but not yet activated.
     """
 
     reservation_id = models.UUIDField(
@@ -31,16 +51,19 @@ class InventoryReservation(BaseModel):
         related_name="reservations",
     )
 
-    quantity = models.PositiveIntegerField()
-
-    expires_at = models.DateTimeField()
-
-    released = models.BooleanField(
-        default=False,
+    quantity = models.PositiveIntegerField(
+        help_text=("Reserved quantity for this reservation."),
     )
 
-    confirmed = models.BooleanField(
-        default=False,
+    expires_at = models.DateTimeField(
+        help_text=("Reservation expiration timestamp."),
+    )
+
+    status = models.CharField(
+        max_length=20,
+        choices=(InventoryReservationStatus.CHOICES),
+        default=(InventoryReservationStatus.ACTIVE),
+        help_text=("Current reservation lifecycle state."),
     )
 
     class Meta:
@@ -52,7 +75,7 @@ class InventoryReservation(BaseModel):
             ),
             models.Index(
                 fields=[
-                    "released",
+                    "status",
                 ],
             ),
             models.Index(
@@ -63,4 +86,11 @@ class InventoryReservation(BaseModel):
         ]
 
     def __str__(self):
-        return f"{self.variant.sku} - {self.quantity}"
+        """
+        Human readable representation.
+
+        Returns:
+            str
+        """
+
+        return f"{self.variant.sku} - {self.quantity} ({self.status})"

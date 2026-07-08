@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.utils import timezone
 
 from apps.audit.services import (
@@ -20,11 +21,27 @@ from apps.payments.models import (
 )
 
 
+@transaction.atomic
 def process_mercadopago_webhook(
     payload,
 ):
     """
     Process MercadoPago webhook payload.
+
+    Responsibilities:
+    - deduplicate webhook events
+    - validate payload
+    - locate related order
+    - dispatch domain events
+    - create audit trail
+    - mark webhook as processed
+
+    Args:
+        payload:
+            MercadoPago webhook payload.
+
+    Returns:
+        None
     """
 
     external_event_id = payload.get(
@@ -36,6 +53,7 @@ def process_mercadopago_webhook(
     )
 
     if not external_event_id:
+        logger.warning("Webhook received without id.")
         return
 
     webhook_event, created = WebhookEvent.objects.get_or_create(
@@ -48,9 +66,11 @@ def process_mercadopago_webhook(
     )
 
     if not created:
+        logger.info((f"Duplicate webhook ignored {external_event_id}"))
         return
 
     if event_type != "payment":
+        logger.info((f"Ignoring webhook event {event_type}"))
         return
 
     data = payload.get(
@@ -63,28 +83,17 @@ def process_mercadopago_webhook(
     )
 
     if not order_id:
-        return
-
-    order = (
-        Order.objects.select_for_update()
-        .filter(
-            id=order_id,
-        )
-        .first()
-    )
-
-    if not order:
+        logger.warning(("Payment webhook received without order_id."))
         return
 
     try:
-        order = Order.objects.get(
+        order = Order.objects.select_for_update().get(
             id=order_id,
         )
 
     except Order.DoesNotExist:
         logger.error((f"Order not found {order_id}"))
-
-    return
+        return
 
     dispatch_event(
         OrderPaidEvent(
@@ -96,18 +105,6 @@ def process_mercadopago_webhook(
 
     webhook_event.processed = True
 
-    logger.info((f"Webhook processed {external_event_id}"))
-
-    create_audit_log(
-        action="payment_webhook_processed",
-        entity_type="payment",
-        entity_id=external_event_id,
-        metadata={
-            "provider": "mercadopago",
-            "event_type": event_type,
-        },
-    )
-
     webhook_event.processed_at = timezone.now()
 
     webhook_event.save(
@@ -116,3 +113,18 @@ def process_mercadopago_webhook(
             "processed_at",
         ],
     )
+
+    create_audit_log(
+        action="payment_webhook_processed",
+        entity_type="payment",
+        entity_id=external_event_id,
+        metadata={
+            "provider": "mercadopago",
+            "event_type": event_type,
+            "order_id": str(
+                order.id,
+            ),
+        },
+    )
+
+    logger.info((f"Webhook processed {external_event_id}"))

@@ -83,3 +83,82 @@ class RecentOrderSerializer(
             return None
 
         return obj.user.email
+
+
+class RevenueTrendSerializer(
+    serializers.Serializer,
+):
+    month = serializers.DateField()
+
+    revenue = serializers.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+    )
+
+
+class OrdersByStatusSerializer(
+    serializers.Serializer,
+):
+    status = serializers.CharField()
+
+    total = serializers.IntegerField()
+
+
+class LowStockProductSerializer(
+    serializers.Serializer,
+):
+    product = serializers.CharField()
+
+    sku = serializers.CharField()
+
+    quantity = serializers.IntegerField()
+
+
+class InventoryHealthSerializer(
+    serializers.Serializer,
+):
+    """
+    Global inventory health metrics.
+    """
+
+    total_stock = serializers.IntegerField()
+
+    reserved_stock = serializers.IntegerField()
+
+    available_stock = serializers.IntegerField()
+
+    reserved_percentage = serializers.FloatField()
+
+
+class ReservedInventorySerializer(
+    serializers.Serializer,
+):
+    """
+    Reserved inventory by variant.
+    """
+
+    product = serializers.CharField()
+
+    sku = serializers.CharField()
+
+    quantity = serializers.IntegerField()
+
+    reserved_quantity = serializers.IntegerField()
+
+    available_quantity = serializers.IntegerField()
+
+
+class ExpiredReservationSerializer(
+    serializers.Serializer,
+):
+    """
+    Expired reservation serializer.
+    """
+
+    reservation_id = serializers.UUIDField()
+
+    sku = serializers.CharField()
+
+    quantity = serializers.IntegerField()
+
+    expired_at = serializers.DateTimeField()

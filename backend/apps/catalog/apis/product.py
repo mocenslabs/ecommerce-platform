@@ -41,12 +41,7 @@ class ProductListApi(
         filters.OrderingFilter,
     ]
 
-    filterset_fields = [
-        "category",
-        "brand",
-        "is_featured",
-        "is_active",
-    ]
+    filterset_class = ProductFilter
 
     search_fields = [
         "name",
@@ -58,17 +53,12 @@ class ProductListApi(
     ordering_fields = [
         "created_at",
         "name",
+        "average_rating",
     ]
 
     ordering = [
         "-created_at",
     ]
-
-    filter_backends = [
-        DjangoFilterBackend,
-    ]
-
-    filterset_class = ProductFilter
 
 
 class FeaturedProductListApi(

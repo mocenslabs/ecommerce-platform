@@ -1,7 +1,13 @@
 from django.urls import path
 
 from apps.dashboard.apis import (
+    DashboardExpiredReservationsApi,
+    DashboardInventoryHealthApi,
+    DashboardLowStockApi,
+    DashboardOrdersByStatusApi,
     DashboardRecentOrdersApi,
+    DashboardReservedInventoryApi,
+    DashboardRevenueTrendApi,
     DashboardStatsApi,
     DashboardTopProductsApi,
 )
@@ -21,5 +27,35 @@ urlpatterns = [
         "recent-orders/",
         DashboardRecentOrdersApi.as_view(),
         name="dashboard-recent-orders",
+    ),
+    path(
+        "revenue-trend/",
+        DashboardRevenueTrendApi.as_view(),
+        name="dashboard-revenue-trend",
+    ),
+    path(
+        "orders-by-status/",
+        DashboardOrdersByStatusApi.as_view(),
+        name="dashboard-orders-by-status",
+    ),
+    path(
+        "low-stock/",
+        DashboardLowStockApi.as_view(),
+        name="dashboard-low-stock",
+    ),
+    path(
+        "inventory-health/",
+        DashboardInventoryHealthApi.as_view(),
+        name="dashboard-inventory-health",
+    ),
+    path(
+        "reserved-inventory/",
+        DashboardReservedInventoryApi.as_view(),
+        name="dashboard-reserved-inventory",
+    ),
+    path(
+        "expired-reservations/",
+        DashboardExpiredReservationsApi.as_view(),
+        name="dashboard-expired-reservations",
     ),
 ]

@@ -1,11 +1,17 @@
 from celery import shared_task
 from django.utils import timezone
 
+from apps.core.logging import (
+    logger,
+)
+from apps.inventory.constants import (
+    InventoryReservationStatus,
+)
 from apps.inventory.models import (
     InventoryReservation,
 )
-from apps.inventory.services.release import (
-    release_inventory_reservations,
+from apps.inventory.services.reservation_lifecycle import (
+    expire_reservation,
 )
 
 
@@ -17,28 +23,40 @@ def cleanup_expired_reservations(
     self,
 ):
     """
-    Release expired inventory reservations.
+    Expire active reservations that exceeded
+    their expiration timestamp.
+
+    This task runs periodically through
+    Celery Beat.
+
+    Expiration flow:
+
+    ACTIVE
+        ↓
+    EXPIRED
+        ↓
+    Inventory restored
+        ↓
+    RELEASE movement created
     """
 
-    expired_reservations = (
-        InventoryReservation.objects.filter(
-            expires_at__lt=timezone.now(),
-            released=False,
-        )
-        .select_related("order")
-        .distinct()
+    reservations = InventoryReservation.objects.filter(
+        status=(InventoryReservationStatus.ACTIVE),
+        expires_at__lt=timezone.now(),
+    ).select_related(
+        "variant",
+        "order",
     )
 
-    processed_orders = set()
+    processed = 0
 
-    for reservation in expired_reservations:
-        order_id = reservation.order.id
-
-        if order_id in processed_orders:
-            continue
-
-        release_inventory_reservations(
-            reservation.order,
+    for reservation in reservations:
+        expire_reservation(
+            reservation,
         )
 
-        processed_orders.add(order_id)
+        processed += 1
+
+    logger.info((f"Expired reservations processed: {processed}"))
+
+    return processed

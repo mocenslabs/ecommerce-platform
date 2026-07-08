@@ -12,7 +12,7 @@ from apps.catalog.models import (
 from apps.reviews.models import (
     ProductReview,
 )
-from apps.reviews.serializers import (
+from apps.reviews.serializers.reviews import (
     CreateProductReviewSerializer,
     ProductReviewSerializer,
     UpdateProductReviewSerializer,

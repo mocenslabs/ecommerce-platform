@@ -1,7 +1,10 @@
 from django.db import transaction
 
-from apps.inventory.models import (
-    Inventory,
+from apps.inventory.constants import (
+    InventoryReservationStatus,
+)
+from apps.inventory.services.reservation_lifecycle import (
+    release_reservation,
 )
 
 
@@ -10,29 +13,15 @@ def release_inventory_reservations(
     order,
 ):
     """
-    Release all inventory reservations
+    Release all active inventory reservations
     associated with an order.
     """
 
-    reservations = order.inventory_reservations.select_related(
-        "variant",
-    ).filter(
-        released=False,
+    reservations = order.inventory_reservations.filter(
+        status=InventoryReservationStatus.ACTIVE,
     )
 
     for reservation in reservations:
-        inventory = Inventory.objects.select_for_update().get(
-            variant=reservation.variant,
-        )
-
-        inventory.reserved_quantity -= reservation.quantity
-
-        inventory.save()
-
-        reservation.released = True
-
-        reservation.save(
-            update_fields=[
-                "released",
-            ],
+        release_reservation(
+            reservation,
         )

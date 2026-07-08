@@ -3,6 +3,9 @@ from rest_framework import serializers
 from apps.catalog.models import (
     Product,
 )
+from apps.catalog.serializers.brand import (
+    BrandSerializer,
+)
 from apps.catalog.serializers.category import (
     CategorySerializer,
 )
@@ -22,7 +25,14 @@ class ProductListSerializer(
     """
 
     primary_image = serializers.SerializerMethodField()
+
+    price = serializers.SerializerMethodField()
+
     category = CategorySerializer(
+        read_only=True,
+    )
+
+    brand = BrandSerializer(
         read_only=True,
     )
 
@@ -45,6 +55,21 @@ class ProductListSerializer(
             image,
         ).data
 
+    def get_price(
+        self,
+        obj,
+    ):
+        """
+        Return first variant price.
+        """
+
+        variant = obj.variants.first()
+
+        if not variant:
+            return None
+
+        return variant.price
+
     class Meta:
         model = Product
 
@@ -55,6 +80,8 @@ class ProductListSerializer(
             "short_description",
             "is_featured",
             "category",
+            "brand",
+            "price",
             "primary_image",
             "average_rating",
             "reviews_count",
@@ -69,6 +96,10 @@ class ProductDetailSerializer(
     """
 
     category = CategorySerializer(
+        read_only=True,
+    )
+
+    brand = BrandSerializer(
         read_only=True,
     )
 
@@ -93,6 +124,7 @@ class ProductDetailSerializer(
             "description",
             "is_featured",
             "category",
+            "brand",
             "variants",
             "images",
             "average_rating",

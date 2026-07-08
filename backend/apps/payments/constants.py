@@ -1,10 +1,20 @@
 class PaymentStatus:
+    """
+    Payment lifecycle.
+    """
+
     PENDING = "pending"
+
     PROCESSING = "processing"
+
     AUTHORIZED = "authorized"
+
     PAID = "paid"
+
     FAILED = "failed"
+
     REFUNDED = "refunded"
+
     CANCELLED = "cancelled"
 
     CHOICES = [
@@ -19,7 +29,12 @@ class PaymentStatus:
 
 
 class PaymentProvider:
+    """
+    Supported providers.
+    """
+
     STRIPE = "stripe"
+
     MERCADOPAGO = "mercadopago"
 
     CHOICES = [

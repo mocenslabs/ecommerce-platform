@@ -18,30 +18,33 @@ from apps.payments.models import (
 
 
 def handle_order_paid(
-    event,
+    payload,
 ):
     """
     Handle order paid event.
     """
 
-    order_id = event.payload.get(
-        "order_id",
+    order = payload.get(
+        "order",
     )
 
-    if not order_id:
+    if not order:
         return
 
-    try:
-        payment = Payment.objects.select_related(
-            "order",
-        ).get(
-            order__order_id=order_id,
+    payment = (
+        Payment.objects.filter(
+            order=order,
         )
+        .order_by(
+            "-created_at",
+        )
+        .first()
+    )
 
-    except Payment.DoesNotExist:
+    if not payment:
         return
 
-    payment.status = PaymentStatus.COMPLETED
+    payment.status = PaymentStatus.PAID
 
     payment.processed_at = timezone.now()
 
@@ -53,10 +56,10 @@ def handle_order_paid(
     )
 
     confirm_inventory_reservations(
-        payment.order,
+        order,
     )
 
     update_order_status(
-        payment.order,
+        order,
         OrderStatus.PAID,
     )

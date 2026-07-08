@@ -9,13 +9,13 @@ from apps.orders.models import (
 class CheckoutSerializer(
     serializers.Serializer,
 ):
-    shipping_address_id = serializers.IntegerField()
+    shipping_address_id = serializers.UUIDField()
 
-    billing_address_id = serializers.IntegerField(
+    billing_address_id = serializers.UUIDField(
         required=False,
     )
 
-    shipping_method_id = serializers.IntegerField()
+    shipping_method_id = serializers.UUIDField()
 
     discount_code = serializers.CharField(
         required=False,

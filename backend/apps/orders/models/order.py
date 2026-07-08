@@ -50,6 +50,104 @@ class Order(BaseModel):
         related_name="shipping_orders",
     )
 
+    # ==========================================
+    # Billing Snapshot
+    # ==========================================
+
+    billing_first_name = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_last_name = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_phone = models.CharField(
+        max_length=30,
+        blank=True,
+    )
+
+    billing_line_1 = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_line_2 = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_city = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_state = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    billing_postal_code = models.CharField(
+        max_length=50,
+        blank=True,
+    )
+
+    billing_country = models.CharField(
+        max_length=2,
+        blank=True,
+    )
+
+    # ==========================================
+    # Shipping Snapshot
+    # ==========================================
+
+    shipping_first_name = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_last_name = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_phone = models.CharField(
+        max_length=30,
+        blank=True,
+    )
+
+    shipping_line_1 = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_line_2 = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_city = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_state = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    shipping_postal_code = models.CharField(
+        max_length=50,
+        blank=True,
+    )
+
+    shipping_country = models.CharField(
+        max_length=2,
+        blank=True,
+    )
+
     subtotal_amount = models.DecimalField(
         max_digits=10,
         decimal_places=2,

@@ -2,36 +2,22 @@ from decimal import Decimal
 
 from django.db import transaction
 
-from apps.audit.services import (
-    create_audit_log,
-)
-from apps.core.events.dispatcher import (
-    dispatch_event,
-)
-from apps.core.logging import (
-    logger,
-)
-from apps.discounts.models import (
-    Discount,
-)
+from apps.audit.services import create_audit_log
+from apps.core.events.dispatcher import dispatch_event
+from apps.core.logging import logger
+from apps.discounts.models import Discount
 from apps.discounts.services.calculator import (
     calculate_discount_amount,
 )
 from apps.discounts.services.validation import (
     validate_discount,
 )
-from apps.inventory.models import (
-    Inventory,
-)
+from apps.inventory.models import Inventory
 from apps.inventory.services.reservation import (
     reserve_inventory_for_order,
 )
-from apps.orders.constants import (
-    OrderStatus,
-)
-from apps.orders.events import (
-    OrderCreatedEvent,
-)
+from apps.orders.constants import OrderStatus
+from apps.orders.events import OrderCreatedEvent
 from apps.orders.exceptions.checkout import (
     EmptyCartException,
     InsufficientStockException,
@@ -67,14 +53,20 @@ def process_checkout(
     """
     Process complete checkout flow.
 
+
     Responsibilities:
-    - validate cart
-    - validate inventory
-    - create order
-    - create order items
-    - reserve inventory
-    - create payment
-    - trigger async tasks
+    - Validate cart
+    - Validate inventory
+    - Create order
+    - Create order items
+    - Snapshot addresses
+    - Reserve inventory
+    - Create payment
+    - Dispatch events
+    - Trigger async tasks
+
+    Returns:
+        Order
     """
 
     cart_items = cart.items.select_related(
@@ -87,6 +79,10 @@ def process_checkout(
             "Cart is empty.",
         )
 
+    billing = billing_address or shipping_address
+
+    shipping = shipping_address
+
     subtotal_amount = Decimal(
         "0.00",
     )
@@ -95,21 +91,33 @@ def process_checkout(
         user=user,
         email=user.email,
         status=OrderStatus.PENDING,
-        shipping_address=shipping_address,
-        billing_address=(billing_address or shipping_address),
+        billing_address=billing,
+        shipping_address=shipping,
+        # Billing Snapshot
+        billing_first_name=billing.first_name,
+        billing_last_name=billing.last_name,
+        billing_phone=billing.phone_number,
+        billing_line_1=billing.line_1,
+        billing_line_2=billing.line_2,
+        billing_city=billing.city,
+        billing_state=billing.state,
+        billing_postal_code=billing.postal_code,
+        billing_country=billing.country,
+        # Shipping Snapshot
+        shipping_first_name=shipping.first_name,
+        shipping_last_name=shipping.last_name,
+        shipping_phone=shipping.phone_number,
+        shipping_line_1=shipping.line_1,
+        shipping_line_2=shipping.line_2,
+        shipping_city=shipping.city,
+        shipping_state=shipping.state,
+        shipping_postal_code=shipping.postal_code,
+        shipping_country=shipping.country,
         shipping_method=shipping_method,
-        subtotal_amount=Decimal(
-            "0.00",
-        ),
-        shipping_amount=Decimal(
-            "0.00",
-        ),
-        tax_amount=Decimal(
-            "0.00",
-        ),
-        total_amount=Decimal(
-            "0.00",
-        ),
+        subtotal_amount=Decimal("0.00"),
+        shipping_amount=Decimal("0.00"),
+        tax_amount=Decimal("0.00"),
+        total_amount=Decimal("0.00"),
     )
 
     for item in cart_items:
@@ -143,15 +151,15 @@ def process_checkout(
             total_price=line_total,
         )
 
-    order.subtotal_amount = subtotal_amount
+        order.subtotal_amount = subtotal_amount
 
-    order.shipping_amount = calculate_shipping_for_order(
-        order,
-    )
+        order.shipping_amount = calculate_shipping_for_order(
+            order,
+        )
 
-    order.tax_amount = calculate_tax_for_order(
-        order,
-    )
+        order.tax_amount = calculate_tax_for_order(
+            order,
+        )
 
     discount_amount = Decimal(
         "0.00",
@@ -174,7 +182,6 @@ def process_checkout(
         )
 
         order.discount = discount
-
         order.discount_amount = discount_amount
 
         discount.used_count += 1
