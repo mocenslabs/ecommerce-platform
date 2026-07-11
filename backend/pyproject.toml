@@ -34,7 +34,7 @@ dev = [
     "faker>=40.18.0",
     "pre-commit>=4.6.0",
     "pytest-cov>=7.1.0",
-    "pip-audit>=2.9.0",
+    "pip-audit>=2.10.1",
 ]
 
 
