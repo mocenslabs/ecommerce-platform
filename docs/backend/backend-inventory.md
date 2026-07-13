@@ -85,22 +85,22 @@ Audit
 
 # Review Progress
 
-| Module | Architecture | API | Audit | Documentation |
-|---------|-------------|-----|-------|---------------|
-| Core | ⏳ | ⏳ | ⏳ | ⏳ |
-| Authentication | ⏳ | ⏳ | ⏳ | ⏳ |
-| Users | ⏳ | ⏳ | ⏳ | ⏳ |
-| Catalog | ⏳ | ⏳ | ⏳ | ⏳ |
-| Inventory | ⏳ | ⏳ | ⏳ | ⏳ |
-| Cart | ⏳ | ⏳ | ⏳ | ⏳ |
-| Wishlist | ⏳ | ⏳ | ⏳ | ⏳ |
-| Orders | ⏳ | ⏳ | ⏳ | ⏳ |
-| Payments | ⏳ | ⏳ | ⏳ | ⏳ |
-| Discounts | ⏳ | ⏳ | ⏳ | ⏳ |
-| Reviews | ⏳ | ⏳ | ⏳ | ⏳ |
-| Notifications | ⏳ | ⏳ | ⏳ | ⏳ |
-| Dashboard | ⏳ | ⏳ | ⏳ | ⏳ |
-| Audit | ⏳ | ⏳ | ⏳ | ⏳ |
+| Module            | Architecture | API | Audit | Documentation |
+|-------------------|--------------|-----|-------|---------------|
+| Core              |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Authentication    |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Users             |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Catalog           |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Inventory         |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Cart              |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Wishlist          |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Orders            |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Payments          |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Discounts         |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Reviews           |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Notifications     |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Dashboard         |     ⏳       | ⏳  |   ⏳  |      ⏳       |
+| Audit             |     ⏳       | ⏳  |   ⏳  |      ⏳       |
 
 ---
 

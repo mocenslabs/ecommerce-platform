@@ -14,16 +14,16 @@ The backend is designed as a modular monolith, where each application represents
 
 The backend stack includes:
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Main programming language |
-| Django | Backend framework |
-| Django REST Framework | REST API development |
-| PostgreSQL | Primary database |
-| Redis | Cache and message broker |
-| Celery | Background processing |
-| Docker | Containerized environment |
-| DRF Spectacular | OpenAPI documentation |
+| Technology            | Purpose                   |
+|-----------------------|---------------------------|
+| Python                | Main programming language |
+| Django                | Backend framework         |
+| Django REST Framework | REST API development      |
+| PostgreSQL            | Primary database          |
+| Redis                 | Cache and message broker  |
+| Celery                | Background processing     |
+| Docker                | Containerized environment |
+| DRF Spectacular       | OpenAPI documentation     |
 
 ---
 
@@ -78,22 +78,22 @@ The backend is organized into independent Django applications.
 
 Current applications:
 
-| Application | Responsibility |
-|-------------|----------------|
-| authentication | Authentication workflows |
-| users | User management |
-| catalog | Products and categories |
-| inventory | Stock management |
-| cart | Shopping cart operations |
-| wishlist | Saved products |
-| orders | Order processing |
-| payments | Payment abstraction |
-| discounts | Promotional rules |
-| reviews | Product reviews |
-| notifications | Notifications system |
-| dashboard | Administrative features |
-| audit | Activity tracking |
-| core | Shared functionality |
+| Application       | Responsibility           |
+|-------------------|--------------------------|
+| authentication    | Authentication workflows |
+| users             | User management          |
+| catalog           | Products and categories  |
+| inventory         | Stock management         |
+| cart              | Shopping cart operations |
+| wishlist          | Saved products           |
+| orders            | Order processing         |
+| payments          | Payment abstraction      |
+| discounts         | Promotional rules        |
+| reviews           | Product reviews          |
+| notifications     | Notifications system     |
+| dashboard         | Administrative features  |
+| audit             | Activity tracking        |
+| core              | Shared functionality     |
 
 ---
 

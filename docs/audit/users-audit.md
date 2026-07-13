@@ -2,13 +2,13 @@
 
 ## Overall Score
 
-| Area | Score |
-|-------|------:|
-| Architecture | ⭐⭐⭐⭐⭐ |
-| API Design | ⭐⭐⭐⭐⭐ |
+| Area            | Score      |
+|-----------------|-----------:|
+| Architecture    | ⭐⭐⭐⭐⭐ |
+| API Design      | ⭐⭐⭐⭐⭐ |
 | Maintainability | ⭐⭐⭐⭐⭐ |
-| Security | ⭐⭐⭐⭐⭐ |
-| Scalability | ⭐⭐⭐⭐⭐ |
+| Security        | ⭐⭐⭐⭐⭐ |
+| Scalability     | ⭐⭐⭐⭐⭐ |
 
 ---
 

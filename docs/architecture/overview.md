@@ -111,22 +111,22 @@ Each Django application represents a specific responsibility.
 
 Main modules:
 
-| Application | Responsibility |
-|-------------|----------------|
+| Application    | Responsibility                    |
+|----------------|-----------------------------------|
 | authentication | Authentication flows and security |
-| users | User management |
-| catalog | Products and categories |
-| inventory | Stock management |
-| cart | Shopping cart operations |
-| wishlist | User saved products |
-| orders | Order lifecycle management |
-| payments | Payment processing abstraction |
-| discounts | Promotional rules |
-| reviews | Product reviews |
-| notifications | User notifications |
-| dashboard | Administrative features |
-| audit | System tracking and auditing |
-| core | Shared functionality |
+| users          | User management                   |
+| catalog        | Products and categories           |
+| inventory      | Stock management                  |
+| cart           | Shopping cart operations          |
+| wishlist       | User saved products               |
+| orders         | Order lifecycle management        |
+| payments       | Payment processing abstraction    |
+| discounts      | Promotional rules                 |
+| reviews        | Product reviews                   |
+| notifications  | User notifications                |
+| dashboard      | Administrative features           |
+| audit          | System tracking and auditing      |
+| core           | Shared functionality              |
 
 ---
 

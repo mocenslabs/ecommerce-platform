@@ -12,13 +12,13 @@ The database design follows domain-driven principles where each business area ow
 
 # Database Technology
 
-| Component | Technology |
-|-----------|------------|
-| Database Engine | PostgreSQL |
-| ORM | Django ORM |
-| Migration System | Django Migrations |
-| Development Database | SQLite (optional) |
-| Production Database | PostgreSQL |
+| Component            | Technology         |
+|----------------------|--------------------|
+| Database Engine      | PostgreSQL         |
+| ORM                  | Django ORM         |
+| Migration System     | Django Migrations  |
+| Development Database | SQLite (optional)  |
+| Production Database  | PostgreSQL         |
 
 ---
 

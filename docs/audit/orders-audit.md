@@ -2,13 +2,13 @@
 
 ## Overall Score
 
-| Area | Score |
-|-------|------:|
-| Architecture | ⭐⭐⭐⭐⭐ |
-| Business Logic | ⭐⭐⭐⭐⭐ |
+| Area            | Score      |
+|-----------------|-----------:|
+| Architecture    | ⭐⭐⭐⭐⭐ |
+| Business Logic  | ⭐⭐⭐⭐⭐ |
 | Maintainability | ⭐⭐⭐⭐⭐ |
-| Security | ⭐⭐⭐⭐⭐ |
-| Scalability | ⭐⭐⭐⭐⭐ |
+| Security        | ⭐⭐⭐⭐⭐ |
+| Scalability     | ⭐⭐⭐⭐⭐ |
 
 ---
 

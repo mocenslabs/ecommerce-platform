@@ -2,13 +2,13 @@
 
 ## Overall Score
 
-| Area | Score |
-|-------|------:|
-| Architecture | ⭐⭐⭐⭐⭐ |
+| Area            | Score      |
+|-----------------|-----------:|
+| Architecture    | ⭐⭐⭐⭐⭐ |
 | Maintainability | ⭐⭐⭐⭐⭐ |
-| Business Rules | ⭐⭐⭐⭐⭐ |
-| Scalability | ⭐⭐⭐⭐⭐ |
-| API Design | ⭐⭐⭐⭐⭐ |
+| Business Rules  | ⭐⭐⭐⭐⭐ |
+| Scalability     | ⭐⭐⭐⭐⭐ |
+| API Design      | ⭐⭐⭐⭐⭐ |
 
 ---
 

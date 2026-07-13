@@ -2,13 +2,13 @@
 
 ## Overall Score
 
-| Area | Score |
-|-------|------:|
-| Architecture | ⭐⭐⭐⭐⭐ |
+| Area            | Score      |
+|-----------------|-----------:|
+| Architecture    | ⭐⭐⭐⭐⭐ |
 | Maintainability | ⭐⭐⭐⭐⭐ |
-| Scalability | ⭐⭐⭐⭐⭐ |
-| Security | ⭐⭐⭐⭐⭐ |
-| Performance | ⭐⭐⭐⭐☆ |
+| Scalability     | ⭐⭐⭐⭐⭐ |
+| Security        | ⭐⭐⭐⭐⭐ |
+| Performance     | ⭐⭐⭐⭐☆  |
 
 ---
 
