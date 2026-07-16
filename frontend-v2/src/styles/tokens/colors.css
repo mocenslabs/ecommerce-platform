@@ -1,0 +1,173 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   colors.css
+|
+| Responsibility:
+|   Defines the Color Design Token architecture.
+|
+| Architecture:
+|   Primitive Palette
+|       ↓
+|   Semantic Tokens
+|       ↓
+|   Component Tokens (future)
+|
+| Important:
+|   Components must NEVER consume Primitive Tokens directly.
+|   Components must always consume Semantic Tokens.
+|
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Primitive Palette
+|--------------------------------------------------------------------------
+|
+| Purpose
+| -------
+| Defines the raw color scales used throughout the application.
+|
+| Rules
+| -----
+| - Never consume these tokens directly in components.
+| - Only Semantic Tokens may reference Primitive Tokens.
+| - Every scale must provide 11 levels (50–950).
+|
+*/
+
+:root {
+
+    /* ----------------------------------------------------------------------
+       Slate
+       Neutral color scale
+       ---------------------------------------------------------------------- */
+
+     --slate-50:  #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
+
+
+    /* ----------------------------------------------------------------------
+        Cyan
+        Primary Brand Color Scale
+
+        Used for:
+        - Primary actions
+        - Interactive elements
+        - Active states
+        - Links
+        - Focus indicators
+
+        Never use directly inside components.
+       ---------------------------------------------------------------------- */
+
+    --cyan-50:  #ecfeff;
+    --cyan-100: #cffafe;
+    --cyan-200: #a5f3fc;
+    --cyan-300: #67e8f9;
+    --cyan-400: #22d3ee;
+    --cyan-500: #06b6d4;
+    --cyan-600: #0891b2;
+    --cyan-700: #0e7490;
+    --cyan-800: #155e75;
+    --cyan-900: #164e63;
+    --cyan-950: #083344;
+
+    /* ----------------------------------------------------------------------
+       Emerald
+       Success color scale
+       ---------------------------------------------------------------------- */
+
+    --emerald-50:  ;
+    --emerald-100: ;
+    --emerald-200: ;
+    --emerald-300: ;
+    --emerald-400: ;
+    --emerald-500: ;
+    --emerald-600: ;
+    --emerald-700: ;
+    --emerald-800: ;
+    --emerald-900: ;
+    --emerald-950: ;
+
+    /* ----------------------------------------------------------------------
+       Amber
+       Warning color scale
+       ---------------------------------------------------------------------- */
+
+    --amber-50:  ;
+    --amber-100: ;
+    --amber-200: ;
+    --amber-300: ;
+    --amber-400: ;
+    --amber-500: ;
+    --amber-600: ;
+    --amber-700: ;
+    --amber-800: ;
+    --amber-900: ;
+    --amber-950: ;
+
+    /* ----------------------------------------------------------------------
+       Red
+       Danger color scale
+       ---------------------------------------------------------------------- */
+
+    --red-50:  ;
+    --red-100: ;
+    --red-200: ;
+    --red-300: ;
+    --red-400: ;
+    --red-500: ;
+    --red-600: ;
+    --red-700: ;
+    --red-800: ;
+    --red-900: ;
+    --red-950: ;
+
+    /* ----------------------------------------------------------------------
+       Sky
+       Information color scale
+       ---------------------------------------------------------------------- */
+
+    --sky-50:  ;
+    --sky-100: ;
+    --sky-200: ;
+    --sky-300: ;
+    --sky-400: ;
+    --sky-500: ;
+    --sky-600: ;
+    --sky-700: ;
+    --sky-800: ;
+    --sky-900: ;
+    --sky-950: ;
+
+    /* ----------------------------------------------------------------------
+       Violet
+       Accent color scale
+       ---------------------------------------------------------------------- */
+
+    --violet-50:  ;
+    --violet-100: ;
+    --violet-200: ;
+    --violet-300: ;
+    --violet-400: ;
+    --violet-500: ;
+    --violet-600: ;
+    --violet-700: ;
+    --violet-800: ;
+    --violet-900: ;
+    --violet-950: ;
+
+}
