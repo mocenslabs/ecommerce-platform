@@ -1,5 +1,100 @@
 /*
 |--------------------------------------------------------------------------
-| Z-Index Scale
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
+|
+| File:
+|   z-index.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the z-index token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER define hardcoded z-index values.
+| - Components must ALWAYS consume z-index tokens.
+| - Z-index represents interface layers,
+|   not arbitrary numeric values.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the layering system used by every visual element.
+|
+*/
+
+/* ==========================================================================
+   Z-Index Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the application layering system.
+
+   Organization
+   ------------
+   1. Layer Scale
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Layer Scale
+       ======================================================================
+
+       Defines the stacking order of interface elements.
+
+       lower
+           ↓
+       higher
+
+       ---------------------------------------------------------------------- */
+
+    --z-index-base: 0;
+
+    --z-index-content: 10;
+
+    --z-index-sticky: 100;
+
+    --z-index-dropdown: 200;
+
+    --z-index-overlay: 300;
+
+    --z-index-drawer: 400;
+
+    --z-index-modal: 500;
+
+    --z-index-popover: 600;
+
+    --z-index-tooltip: 700;
+
+    --z-index-toast: 800;
+
+    --z-index-loading: 900;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never define z-index values directly.
+|
+| - Every new interface layer should reuse the existing
+|   scale whenever possible.
+|
+| - Avoid introducing arbitrary z-index values.
+|
+| - The numeric value is an implementation detail.
+|   The semantic layer name is what components should rely on.
+|
+| - Future semantic layer tokens belong to higher layers
+|   of the Design System.
+|
 */

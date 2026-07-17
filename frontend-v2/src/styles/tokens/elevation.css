@@ -1,5 +1,110 @@
 /*
 |--------------------------------------------------------------------------
-| Elevation Design Tokens
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
+|
+| File:
+|   elevation.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the elevation token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER define custom shadows.
+| - Components must ALWAYS consume elevation tokens.
+| - Elevation communicates hierarchy, not decoration.
+| - Elevation tokens remain framework agnostic.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the depth language used by components,
+| overlays and layouts.
+|
+*/
+
+/* ==========================================================================
+   Elevation Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the shadow system used throughout the application.
+
+   Organization
+   ------------
+   1. Shadow Scale
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Shadow Scale
+       ======================================================================
+
+       Defines the available elevation levels.
+
+       Usage examples:
+
+       xs  -> Inputs
+       sm  -> Buttons
+       md  -> Cards
+       lg  -> Dropdowns
+       xl  -> Modals
+       2xl -> Floating Panels
+
+       ---------------------------------------------------------------------- */
+
+    --shadow-none: none;
+
+    --shadow-xs:
+        0 1px 2px rgb(15 23 42 / 0.05);
+
+    --shadow-sm:
+        0 1px 3px rgb(15 23 42 / 0.10),
+        0 1px 2px rgb(15 23 42 / 0.06);
+
+    --shadow-md:
+        0 4px 6px rgb(15 23 42 / 0.10),
+        0 2px 4px rgb(15 23 42 / 0.06);
+
+    --shadow-lg:
+        0 10px 15px rgb(15 23 42 / 0.10),
+        0 4px 6px rgb(15 23 42 / 0.05);
+
+    --shadow-xl:
+        0 20px 25px rgb(15 23 42 / 0.12),
+        0 8px 10px rgb(15 23 42 / 0.06);
+
+    --shadow-2xl:
+        0 25px 50px rgb(15 23 42 / 0.25);
+
+    --shadow-inner:
+        inset 0 2px 4px rgb(15 23 42 / 0.06);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never define box-shadow values directly.
+|
+| - Elevation should communicate hierarchy,
+|   not visual decoration.
+|
+| - Prefer existing elevation levels instead of
+|   introducing new shadows.
+|
+| - Semantic elevation tokens (modal shadow,
+|   popover shadow, tooltip shadow, etc.)
+|   belong to higher layers of the Design System.
+|
 */

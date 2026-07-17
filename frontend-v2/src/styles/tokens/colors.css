@@ -6,47 +6,85 @@
 | File:
 |   colors.css
 |
+| Layer:
+|   Foundation Layer
+|
 | Responsibility:
-|   Defines the Color Design Token architecture.
+|   Defines the complete color token architecture used throughout
+|   the application.
 |
 | Architecture:
-|   Primitive Palette
-|       ↓
-|   Semantic Tokens
-|       ↓
-|   Component Tokens (future)
 |
-| Important:
-|   Components must NEVER consume Primitive Tokens directly.
-|   Components must always consume Semantic Tokens.
+|   Primitive Palette
+|           │
+|           ▼
+|   Semantic Tokens (Contract)
+|           │
+|           ▼
+|   Theme Layer
+|           │
+|           ▼
+|   Component Tokens (Future)
+|           │
+|           ▼
+|   Components
+|
+| Rules:
+|
+| - Components must NEVER consume Primitive Tokens directly.
+| - Components must ALWAYS consume Semantic Tokens.
+| - Themes are responsible for assigning Semantic Tokens.
+| - Primitive Tokens only define color values.
+| - Semantic Tokens define meaning.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It should remain framework-agnostic and independent of themes.
 |
 */
 
-/*
-|--------------------------------------------------------------------------
-| Primitive Palette
-|--------------------------------------------------------------------------
-|
-| Purpose
-| -------
-| Defines the raw color scales used throughout the application.
-|
-| Rules
-| -----
-| - Never consume these tokens directly in components.
-| - Only Semantic Tokens may reference Primitive Tokens.
-| - Every scale must provide 11 levels (50–950).
-|
-*/
+/* ==========================================================================
+   Color Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every color available inside the Design System.
+
+   Organization
+   ------------
+   1. Primitive Palette
+   2. Semantic Tokens
+
+   Primitive Tokens
+   ----------------
+   Raw color values.
+
+   Semantic Tokens
+   ---------------
+   Color contracts consumed by the application.
+
+   ========================================================================== */
 
 :root {
 
+    /* ======================================================================
+       Primitive Palette
+       ====================================================================== */
+
     /* ----------------------------------------------------------------------
        Slate
-       Neutral color scale
+       Neutral Color Scale
+
+       Used for:
+       - Backgrounds
+       - Surfaces
+       - Borders
+       - Typography
        ---------------------------------------------------------------------- */
 
-     --slate-50:  #f8fafc;
+    --slate-50:  #f8fafc;
     --slate-100: #f1f5f9;
     --slate-200: #e2e8f0;
     --slate-300: #cbd5e1;
@@ -58,19 +96,16 @@
     --slate-900: #0f172a;
     --slate-950: #020617;
 
-
     /* ----------------------------------------------------------------------
-        Cyan
-        Primary Brand Color Scale
+       Cyan
+       Primary Brand Color Scale
 
-        Used for:
-        - Primary actions
-        - Interactive elements
-        - Active states
-        - Links
-        - Focus indicators
-
-        Never use directly inside components.
+       Used for:
+       - Primary actions
+       - Interactive elements
+       - Active states
+       - Links
+       - Focus indicators
        ---------------------------------------------------------------------- */
 
     --cyan-50:  #ecfeff;
@@ -87,87 +122,229 @@
 
     /* ----------------------------------------------------------------------
        Emerald
-       Success color scale
+       Success Color Scale
+
+       Used for:
+       - Success messages
+       - Positive status
+       - Confirmed actions
        ---------------------------------------------------------------------- */
 
-    --emerald-50:  ;
-    --emerald-100: ;
-    --emerald-200: ;
-    --emerald-300: ;
-    --emerald-400: ;
-    --emerald-500: ;
-    --emerald-600: ;
-    --emerald-700: ;
-    --emerald-800: ;
-    --emerald-900: ;
-    --emerald-950: ;
+    --emerald-50:  #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-200: #a7f3d0;
+    --emerald-300: #6ee7b7;
+    --emerald-400: #34d399;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+    --emerald-800: #065f46;
+    --emerald-900: #064e3b;
+    --emerald-950: #022c22;
 
     /* ----------------------------------------------------------------------
        Amber
-       Warning color scale
+       Warning Color Scale
+
+       Used for:
+       - Warning messages
+       - Pending states
+       - Attention indicators
        ---------------------------------------------------------------------- */
 
-    --amber-50:  ;
-    --amber-100: ;
-    --amber-200: ;
-    --amber-300: ;
-    --amber-400: ;
-    --amber-500: ;
-    --amber-600: ;
-    --amber-700: ;
-    --amber-800: ;
-    --amber-900: ;
-    --amber-950: ;
+    --amber-50:  #fffbeb;
+    --amber-100: #fef3c7;
+    --amber-200: #fde68a;
+    --amber-300: #fcd34d;
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --amber-600: #d97706;
+    --amber-700: #b45309;
+    --amber-800: #92400e;
+    --amber-900: #78350f;
+    --amber-950: #451a03;
 
     /* ----------------------------------------------------------------------
        Red
-       Danger color scale
+       Danger Color Scale
+
+       Used for:
+       - Errors
+       - Validation failures
+       - Destructive actions
        ---------------------------------------------------------------------- */
 
-    --red-50:  ;
-    --red-100: ;
-    --red-200: ;
-    --red-300: ;
-    --red-400: ;
-    --red-500: ;
-    --red-600: ;
-    --red-700: ;
-    --red-800: ;
-    --red-900: ;
-    --red-950: ;
+    --red-50:  #fef2f2;
+    --red-100: #fee2e2;
+    --red-200: #fecaca;
+    --red-300: #fca5a5;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-600: #dc2626;
+    --red-700: #b91c1c;
+    --red-800: #991b1b;
+    --red-900: #7f1d1d;
+    --red-950: #450a0a;
 
     /* ----------------------------------------------------------------------
        Sky
-       Information color scale
+       Information Color Scale
+
+       Used for:
+       - Informational messages
+       - Neutral notifications
+       - System feedback
        ---------------------------------------------------------------------- */
 
-    --sky-50:  ;
-    --sky-100: ;
-    --sky-200: ;
-    --sky-300: ;
-    --sky-400: ;
-    --sky-500: ;
-    --sky-600: ;
-    --sky-700: ;
-    --sky-800: ;
-    --sky-900: ;
-    --sky-950: ;
+    --sky-50:  #f0f9ff;
+    --sky-100: #e0f2fe;
+    --sky-200: #bae6fd;
+    --sky-300: #7dd3fc;
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
+    --sky-600: #0284c7;
+    --sky-700: #0369a1;
+    --sky-800: #075985;
+    --sky-900: #0c4a6e;
+    --sky-950: #082f49;
 
     /* ----------------------------------------------------------------------
        Violet
-       Accent color scale
+       Accent Color Scale
+
+       Used for:
+       - Accent elements
+       - Premium features
+       - Optional highlights
        ---------------------------------------------------------------------- */
 
-    --violet-50:  ;
-    --violet-100: ;
-    --violet-200: ;
-    --violet-300: ;
-    --violet-400: ;
-    --violet-500: ;
-    --violet-600: ;
-    --violet-700: ;
-    --violet-800: ;
-    --violet-900: ;
-    --violet-950: ;
+    --violet-50:  #f5f3ff;
+    --violet-100: #ede9fe;
+    --violet-200: #ddd6fe;
+    --violet-300: #c4b5fd;
+    --violet-400: #a78bfa;
+    --violet-500: #8b5cf6;
+    --violet-600: #7c3aed;
+    --violet-700: #6d28d9;
+    --violet-800: #5b21b6;
+    --violet-900: #4c1d95;
+    --violet-950: #2e1065;
+
+        /* ======================================================================
+       Semantic Tokens
+       ====================================================================== */
+
+    /* ----------------------------------------------------------------------
+       Brand Colors
+
+       These tokens define the application's primary visual identity.
+       Themes are responsible for assigning the final values.
+       ---------------------------------------------------------------------- */
+
+    --color-primary: ;
+    --color-primary-hover: ;
+    --color-primary-active: ;
+    --color-primary-focus: ;
+
+    --color-secondary: ;
+
+    /* ----------------------------------------------------------------------
+       Status Colors
+
+       Used for application feedback and status communication.
+       ---------------------------------------------------------------------- */
+
+    --color-success: ;
+    --color-warning: ;
+    --color-danger: ;
+    --color-info: ;
+
+    /* ----------------------------------------------------------------------
+       Surface Colors
+
+       Defines backgrounds and surfaces throughout the application.
+       ---------------------------------------------------------------------- */
+
+    --color-background: ;
+    --color-background-alt: ;
+
+    --color-surface: ;
+    --color-surface-secondary: ;
+
+    --color-overlay: ;
+
+    /* ----------------------------------------------------------------------
+       Text Colors
+
+       Defines the semantic typography colors.
+       ---------------------------------------------------------------------- */
+
+    --color-text-primary: ;
+    --color-text-secondary: ;
+    --color-text-muted: ;
+    --color-text-disabled: ;
+    --color-text-inverse: ;
+
+    /* ----------------------------------------------------------------------
+       Border Colors
+
+       Defines borders and focus indicators.
+       ---------------------------------------------------------------------- */
+
+    --color-border: ;
+    --color-border-light: ;
+    --color-border-strong: ;
+    --color-border-focus: ;
+
+    /* ----------------------------------------------------------------------
+       Feedback Colors
+
+       Complete color definitions for feedback components.
+
+       Each feedback state contains:
+       - Background
+       - Text
+       - Border
+       ---------------------------------------------------------------------- */
+
+    /* Success */
+
+    --color-success-background: ;
+    --color-success-text: ;
+    --color-success-border: ;
+
+    /* Warning */
+
+    --color-warning-background: ;
+    --color-warning-text: ;
+    --color-warning-border: ;
+
+    /* Danger */
+
+    --color-danger-background: ;
+    --color-danger-text: ;
+    --color-danger-border: ;
+
+    /* Information */
+
+    --color-info-background: ;
+    --color-info-text: ;
+    --color-info-border: ;
 
 }
+
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Primitive Tokens must never be referenced directly by components.
+|
+| - Semantic Tokens are assigned by Theme files.
+|
+| - New color families require architectural approval.
+|
+| - Do not remove existing tokens to preserve backward compatibility.
+|
+*/

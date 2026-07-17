@@ -1,5 +1,88 @@
 /*
 |--------------------------------------------------------------------------
-| Responsive Breakpoints
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
+|
+| File:
+|   breakpoints.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the breakpoint token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER hardcode viewport widths.
+| - Responsive layouts must consume breakpoint tokens.
+| - Breakpoints define responsive boundaries,
+|   not layout behavior.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the responsive scale used by layouts,
+| utilities and components.
+|
+*/
+
+/* ==========================================================================
+   Breakpoint Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the responsive breakpoint scale.
+
+   Organization
+   ------------
+   1. Viewport Breakpoints
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Viewport Breakpoints
+       ======================================================================
+
+       Mobile First Strategy
+
+       xs  -> Small phones
+       sm  -> Large phones
+       md  -> Tablets
+       lg  -> Small laptops
+       xl  -> Desktop
+       2xl -> Large desktop
+
+       ---------------------------------------------------------------------- */
+
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never hardcode viewport widths.
+|
+| - Breakpoints define responsive thresholds,
+|   not responsive layouts.
+|
+| - New breakpoints should be introduced only
+|   after architectural review.
+|
+| - Media queries, container queries and responsive
+|   utilities belong to higher layers of the
+|   Design System.
+|
 */

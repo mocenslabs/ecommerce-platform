@@ -1,5 +1,111 @@
 /*
 |--------------------------------------------------------------------------
-| Motion Design Tokens
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
+|
+| File:
+|   motion.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the motion token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER define hardcoded durations.
+| - Components must NEVER define hardcoded easing curves.
+| - Components must ALWAYS consume motion tokens.
+| - Motion should improve usability, never distract users.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the animation language used by components,
+| layouts and interactive elements.
+|
+*/
+
+/* ==========================================================================
+   Motion Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the timing and easing system used throughout
+   the application.
+
+   Organization
+   ------------
+   1. Duration Scale
+   2. Easing Functions
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Duration Scale
+       ======================================================================
+
+       Defines the available animation durations.
+
+       Usage examples:
+
+       fast     -> Hover states
+       normal   -> Buttons
+       slow     -> Dialogs
+       slower   -> Complex transitions
+
+       ---------------------------------------------------------------------- */
+
+    --duration-instant: 0ms;
+
+    --duration-fast: 100ms;
+    --duration-normal: 200ms;
+    --duration-slow: 300ms;
+    --duration-slower: 500ms;
+
+    /* ======================================================================
+       Easing Functions
+       ======================================================================
+
+       Defines the timing functions used for animations.
+
+       ---------------------------------------------------------------------- */
+
+    --ease-linear: linear;
+
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never define animation durations directly.
+|
+| - Motion should communicate state changes,
+|   not decorative effects.
+|
+| - Prefer existing duration tokens before
+|   introducing new ones.
+|
+| - Semantic motion tokens (button transition,
+|   modal animation, tooltip animation, etc.)
+|   belong to higher layers of the Design System.
+|
+| - Respect user accessibility preferences,
+|   including reduced motion settings.
+|
 */

@@ -1,11 +1,151 @@
 /*
 |--------------------------------------------------------------------------
-| Typography Design Tokens
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
 |
-| Font families
-| Font sizes
-| Font weights
-| Line heights
+| File:
+|   typography.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the typography token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER use hardcoded typography values.
+| - Components must ALWAYS consume typography tokens.
+| - Typography must provide a consistent visual hierarchy.
+| - Typography tokens must remain framework agnostic.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the typography language used by every component,
+| layout and page.
+|
+*/
+
+/* ==========================================================================
+   Typography Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the typography system used throughout the application.
+
+   Organization
+   ------------
+   1. Font Families
+   2. Font Sizes
+   3. Font Weights
+   4. Line Heights
+   5. Letter Spacing
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Font Families
+       ======================================================================
+
+       Defines the default font stacks.
+
+       ---------------------------------------------------------------------- */
+
+    --font-family-base:
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --font-family-monospace:
+        "JetBrains Mono",
+        "Fira Code",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    /* ======================================================================
+       Font Sizes
+       ======================================================================
+
+       Defines the typography scale.
+
+       Based on a modular UI scale.
+
+       ---------------------------------------------------------------------- */
+
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+
+    /* ======================================================================
+       Font Weights
+       ======================================================================
+
+       Defines the available font weights.
+
+       ---------------------------------------------------------------------- */
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* ======================================================================
+       Line Heights
+       ======================================================================
+
+       Defines vertical rhythm.
+
+       ---------------------------------------------------------------------- */
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* ======================================================================
+       Letter Spacing
+       ======================================================================
+
+       Defines tracking values.
+
+       ---------------------------------------------------------------------- */
+
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never define typography values directly.
+|
+| - Typography tokens define hierarchy, not styling.
+|
+| - New typography tokens should preserve the existing scale.
+|
+| - Avoid introducing arbitrary font sizes.
+|
+| - Headings, paragraphs, labels and captions should consume
+|   these tokens instead of custom values.
 |
 */

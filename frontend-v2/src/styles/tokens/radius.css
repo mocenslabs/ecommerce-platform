@@ -1,5 +1,95 @@
 /*
 |--------------------------------------------------------------------------
-| Border Radius Design Tokens
+| Premium E-commerce Platform
 |--------------------------------------------------------------------------
+|
+| File:
+|   radius.css
+|
+| Layer:
+|   Foundation Layer
+|
+| Responsibility:
+|   Defines the border radius token architecture used throughout
+|   the application.
+|
+| Rules:
+|
+| - Components must NEVER use hardcoded border-radius values.
+| - Components must ALWAYS consume radius tokens.
+| - Radius tokens provide a consistent visual language.
+| - Tokens should remain framework agnostic.
+|
+| Notes:
+|
+| This file belongs to the Foundation Layer of the Design System.
+| It defines the corner radius language used by components,
+| layouts and interactive elements.
+|
+*/
+
+/* ==========================================================================
+   Radius Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the corner radius scale used throughout the application.
+
+   Organization
+   ------------
+   1. Radius Scale
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Radius Scale
+       ======================================================================
+
+       Defines the available border radius values.
+
+       Usage examples:
+
+       xs  -> Small badges
+       sm  -> Inputs
+       md  -> Buttons
+       lg  -> Cards
+       xl  -> Modals
+       2xl -> Large panels
+       full -> Pills / Avatars
+
+       ---------------------------------------------------------------------- */
+
+    --radius-none: 0;
+
+    --radius-xs: 0.125rem;      /* 2px */
+    --radius-sm: 0.25rem;       /* 4px */
+    --radius-md: 0.5rem;        /* 8px */
+    --radius-lg: 0.75rem;       /* 12px */
+    --radius-xl: 1rem;          /* 16px */
+    --radius-2xl: 1.5rem;       /* 24px */
+
+    --radius-full: 9999px;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Components must never define border-radius values directly.
+|
+| - Radius tokens should preserve visual consistency.
+|
+| - New radius values should only be introduced when justified.
+|
+| - Prefer existing tokens instead of creating custom values.
+|
+| - Semantic radius tokens for specific components (cards,
+|   dialogs, inputs, etc.) belong to higher layers of the
+|   Design System.
+|
 */
