@@ -1,0 +1,46 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   index.css
+|
+| Responsibility:
+|   Centralizes all application themes.
+|
+| Architecture:
+|
+| Design Tokens
+|        ↓
+| Theme
+|        ↓
+| Components
+|
+| Notes:
+|
+| - Only one default theme should be active.
+| - Additional themes remain available for runtime switching.
+|
+*/
+
+/* ==========================================================================
+   Default Theme
+   ========================================================================== */
+
+@import "./light.css";
+
+/* ==========================================================================
+   Optional Themes
+   ========================================================================== */
+
+/*
+|--------------------------------------------------------------------------
+| Dark Theme
+|--------------------------------------------------------------------------
+|
+| Enable when runtime theme switching is implemented.
+|
+*/
+
+/* @import "./dark.css"; */

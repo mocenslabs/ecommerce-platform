@@ -1,0 +1,98 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   base.css
+|
+| Responsibility:
+|   Defines the global visual foundation of the application.
+|
+| Goals:
+|
+| - Apply Design Tokens globally.
+| - Establish base colors.
+| - Configure typography inheritance.
+| - Define default backgrounds.
+| - Improve rendering consistency.
+|
+| Important:
+|
+| This file must only define global styles.
+|
+| Components should inherit from these styles rather than redefining them.
+|
+*/
+
+/* ==========================================================================
+   Root Elements
+   ========================================================================== */
+
+html {
+    font-size: 100%;
+    color-scheme: light;
+}
+
+/* ==========================================================================
+   Body
+   ========================================================================== */
+
+body {
+    min-width: 320px;
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Application Root
+   ========================================================================== */
+
+#app {
+    min-height: 100vh;
+    isolation: isolate;
+}
+
+/* ==========================================================================
+   Text Selection
+   ========================================================================== */
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+/* ==========================================================================
+   Focus Visibility
+   ========================================================================== */
+
+:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Horizontal Rule
+   ========================================================================== */
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   Horizontal Overflow Protection
+   ========================================================================== */
+
+body,
+#app {
+    overflow-x: clip;
+}

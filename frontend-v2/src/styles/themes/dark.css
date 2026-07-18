@@ -1,0 +1,74 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   dark.css
+|
+| Responsibility:
+|   Defines the Dark Theme for the application.
+|
+| Architecture:
+|
+| Semantic Tokens
+|        ↓
+| Dark Theme
+|        ↓
+| Components
+|
+| Components must never consume Semantic Tokens directly.
+|
+*/
+
+/* ==========================================================================
+   Dark Theme
+   ========================================================================== */
+
+[data-theme="dark"] {
+
+    /* ======================================================================
+       Brand
+       ====================================================================== */
+
+    --theme-primary: var(--color-primary);
+    --theme-primary-hover: var(--color-primary-hover);
+    --theme-primary-active: var(--color-primary-active);
+
+    /* ======================================================================
+       Backgrounds
+       ====================================================================== */
+
+    --theme-background: var(--slate-950);
+    --theme-background-alt: var(--slate-900);
+
+    --theme-surface: var(--slate-900);
+    --theme-surface-secondary: var(--slate-800);
+
+    /* ======================================================================
+       Text
+       ====================================================================== */
+
+    --theme-text-primary: var(--slate-50);
+    --theme-text-secondary: var(--slate-300);
+    --theme-text-muted: var(--slate-400);
+    --theme-text-inverse: var(--slate-950);
+
+    /* ======================================================================
+       Borders
+       ====================================================================== */
+
+    --theme-border: var(--slate-700);
+    --theme-border-light: var(--slate-800);
+    --theme-border-focus: var(--cyan-400);
+
+    /* ======================================================================
+       Status
+       ====================================================================== */
+
+    --theme-success: var(--color-success);
+    --theme-warning: var(--color-warning);
+    --theme-danger: var(--color-danger);
+    --theme-info: var(--color-info);
+
+}

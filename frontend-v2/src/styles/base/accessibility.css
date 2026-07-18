@@ -1,0 +1,115 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   accessibility.css
+|
+| Responsibility:
+|   Defines global accessibility behaviors shared by the entire application.
+|
+| Goals:
+|
+| - Improve keyboard navigation.
+| - Improve focus visibility.
+| - Respect user accessibility preferences.
+| - Improve readability.
+| - Establish consistent accessibility behavior.
+|
+| Important:
+|
+| Components should inherit these rules.
+| Component-specific accessibility belongs inside the component itself.
+|
+*/
+
+/* ==========================================================================
+   Keyboard Focus
+   ========================================================================== */
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Disabled Elements
+   ========================================================================== */
+
+:disabled,
+[aria-disabled="true"] {
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Screen Reader Only
+   ========================================================================== */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip: rect(0, 0, 0, 0);
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+/* ==========================================================================
+   High Contrast Mode
+   ========================================================================== */
+
+@media (prefers-contrast: more) {
+
+    :focus-visible {
+        outline-width: 3px;
+    }
+
+}
+
+/* ==========================================================================
+   Forced Colors
+   ========================================================================== */
+
+@media (forced-colors: active) {
+
+    :focus-visible {
+        outline: 2px solid Highlight;
+    }
+
+}

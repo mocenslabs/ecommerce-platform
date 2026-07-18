@@ -1,0 +1,74 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   light.css
+|
+| Responsibility:
+|   Defines the default Light Theme for the application.
+|
+| Architecture:
+|
+| Semantic Tokens
+|        ↓
+| Theme Aliases
+|        ↓
+| Component Tokens
+|
+| Components must never consume Semantic Tokens directly.
+|
+*/
+
+/* ==========================================================================
+   Light Theme
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Brand
+       ====================================================================== */
+
+    --theme-primary: var(--color-primary);
+    --theme-primary-hover: var(--color-primary-hover);
+    --theme-primary-active: var(--color-primary-active);
+
+    /* ======================================================================
+       Backgrounds
+       ====================================================================== */
+
+    --theme-background: var(--color-background);
+    --theme-background-alt: var(--color-background-alt);
+
+    --theme-surface: var(--color-surface);
+    --theme-surface-secondary: var(--color-surface-secondary);
+
+    /* ======================================================================
+       Text
+       ====================================================================== */
+
+    --theme-text-primary: var(--color-text-primary);
+    --theme-text-secondary: var(--color-text-secondary);
+    --theme-text-muted: var(--color-text-muted);
+    --theme-text-inverse: var(--color-text-inverse);
+
+    /* ======================================================================
+       Borders
+       ====================================================================== */
+
+    --theme-border: var(--color-border);
+    --theme-border-light: var(--color-border-light);
+    --theme-border-focus: var(--color-border-focus);
+
+    /* ======================================================================
+       Status
+       ====================================================================== */
+
+    --theme-success: var(--color-success);
+    --theme-warning: var(--color-warning);
+    --theme-danger: var(--color-danger);
+    --theme-info: var(--color-info);
+
+}
