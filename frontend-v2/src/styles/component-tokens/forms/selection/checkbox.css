@@ -1,0 +1,99 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   checkbox.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Checkbox component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+*/
+
+/* ==========================================================================
+   Checkbox Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --checkbox-size-sm: var(--size-4);
+
+    --checkbox-size-md: var(--size-5);
+
+    --checkbox-size-lg: var(--size-6);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --checkbox-border-width: 1px;
+
+    --checkbox-border-style: solid;
+
+    --checkbox-border-radius: var(--radius-sm);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --checkbox-background: var(--color-surface);
+
+    --checkbox-border-color: var(--color-border);
+
+    --checkbox-color: var(--color-text-inverse);
+
+    --checkbox-checked-background: var(--color-primary);
+
+    --checkbox-checked-border: var(--color-primary);
+
+    /* ======================================================================
+       Focus
+       ====================================================================== */
+
+    --checkbox-focus-border: var(--color-border-focus);
+
+    --checkbox-focus-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Disabled
+       ====================================================================== */
+
+    --checkbox-disabled-background: var(--color-surface-secondary);
+
+    --checkbox-disabled-border: var(--color-border);
+
+    --checkbox-disabled-color: var(--color-text-disabled);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --checkbox-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Checkbox icons belong to the component implementation.
+|
+| - Validation states consume Semantic Tokens.
+|
+*/

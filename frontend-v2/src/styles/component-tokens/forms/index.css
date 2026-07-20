@@ -1,0 +1,33 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   index.css
+|
+| Layer:
+|   Forms Component Tokens
+|
+| Responsibility:
+|   Imports all Form Component Token files.
+|
+*/
+
+/* ==========================================================================
+   Form Components
+   ========================================================================== */
+
+@import "./button.css";
+
+@import "./input.css";
+
+@import "./textarea.css";
+
+@import "./select.css";
+
+@import "./checkbox.css";
+
+@import "./radio.css";
+
+@import "./switch.css";

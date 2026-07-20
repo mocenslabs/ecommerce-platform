@@ -1,0 +1,100 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   chip.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Chip component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Chips represent compact pieces of information and may
+| optionally support icons, avatars or dismiss actions.
+|
+*/
+
+/* ==========================================================================
+   Chip Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --chip-font-family: var(--font-family-base);
+
+    --chip-font-size: var(--font-size-sm);
+
+    --chip-font-weight: var(--font-weight-medium);
+
+    --chip-line-height: var(--line-height-normal);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --chip-padding-x: var(--space-3);
+
+    --chip-padding-y: var(--space-2);
+
+    --chip-gap: var(--space-2);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --chip-height: var(--size-8);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --chip-border-width: 1px;
+
+    --chip-border-style: solid;
+
+    --chip-border-radius: var(--radius-full);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --chip-background: var(--color-surface-secondary);
+
+    --chip-color: var(--color-text-primary);
+
+    --chip-border-color: var(--color-border);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --chip-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Chips should remain visually lightweight.
+|
+| - Variant colors consume Semantic Tokens.
+|
+*/

@@ -1,0 +1,78 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   animations.css
+|
+| Responsibility:
+|   Animation helper classes.
+|
+| Notes:
+|
+| - Uses Motion Design Tokens.
+| - Components may compose these helpers.
+| - Animation names come from keyframes.css.
+|
+*/
+
+/* ==========================================================================
+   Fade
+   ========================================================================== */
+
+.animate-fade-in {
+    animation: fade-in var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.animate-fade-out {
+    animation: fade-out var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+/* ==========================================================================
+   Scale
+   ========================================================================== */
+
+.animate-scale-in {
+    animation: scale-in var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.animate-scale-out {
+    animation: scale-out var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+/* ==========================================================================
+   Slide
+   ========================================================================== */
+
+.animate-slide-up {
+    animation: slide-up var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.animate-slide-down {
+    animation: slide-down var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.animate-slide-left {
+    animation: slide-left var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.animate-slide-right {
+    animation: slide-right var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+/* ==========================================================================
+   Rotation
+   ========================================================================== */
+
+.animate-spin {
+    animation: spin var(--motion-duration-slow) linear infinite;
+}
+
+/* ==========================================================================
+   Pulse
+   ========================================================================== */
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}

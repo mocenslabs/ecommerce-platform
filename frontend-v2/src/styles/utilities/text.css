@@ -1,0 +1,114 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   text.css
+|
+| Responsibility:
+|   Text utility classes.
+|
+| Notes:
+|
+| - Typography values come from Design Tokens.
+| - Utilities should never redefine typography tokens.
+|
+*/
+
+/* ==========================================================================
+   Text Alignment
+   ========================================================================== */
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* ==========================================================================
+   Text Transform
+   ========================================================================== */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-normal-case {
+    text-transform: none;
+}
+
+/* ==========================================================================
+   Text Decoration
+   ========================================================================== */
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}
+
+.text-no-decoration {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Font Weight
+   ========================================================================== */
+
+.font-light {
+    font-weight: var(--font-weight-light);
+}
+
+.font-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Text Wrapping
+   ========================================================================== */
+
+.text-wrap {
+    white-space: normal;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-break {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}

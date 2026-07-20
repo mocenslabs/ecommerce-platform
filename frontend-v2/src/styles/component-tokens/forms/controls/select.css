@@ -1,0 +1,148 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   select.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Select component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Select shares most visual characteristics with Input while
+| introducing tokens for dropdown indicators.
+|
+*/
+
+/* ==========================================================================
+   Select Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Select component.
+
+   Organization
+   ------------
+   1. Typography
+   2. Spacing
+   3. Sizing
+   4. Border
+   5. Colors
+   6. Indicator
+   7. Focus
+   8. Disabled
+   9. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --select-font-family: var(--font-family-base);
+
+    --select-font-size: var(--font-size-base);
+
+    --select-font-weight: var(--font-weight-regular);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --select-padding-x: var(--space-4);
+
+    --select-padding-y: var(--space-2);
+
+    --select-padding-right: var(--space-8);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --select-height-sm: var(--size-8);
+
+    --select-height-md: var(--size-10);
+
+    --select-height-lg: var(--size-12);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --select-border-width: 1px;
+
+    --select-border-style: solid;
+
+    --select-border-radius: var(--radius-md);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --select-background: var(--color-surface);
+
+    --select-color: var(--color-text-primary);
+
+    --select-border-color: var(--color-border);
+
+    /* ======================================================================
+       Indicator
+       ====================================================================== */
+
+    --select-indicator-size: var(--size-4);
+
+    --select-indicator-color: var(--color-text-secondary);
+
+    /* ======================================================================
+       Focus
+       ====================================================================== */
+
+    --select-focus-border-color: var(--color-border-focus);
+
+    --select-focus-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Disabled
+       ====================================================================== */
+
+    --select-disabled-background: var(--color-surface-secondary);
+
+    --select-disabled-color: var(--color-text-disabled);
+
+    --select-disabled-border-color: var(--color-border);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --select-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Select should remain visually aligned with Input.
+|
+| - Dropdown indicator styling must be tokenized.
+|
+| - Component implementation belongs to Select.vue.
+|
+*/

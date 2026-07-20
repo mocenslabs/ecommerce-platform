@@ -1,0 +1,148 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   input.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Input component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Input Tokens are shared by text-based inputs unless a
+| specialized component explicitly overrides them.
+|
+*/
+
+/* ==========================================================================
+   Input Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Input component.
+
+   Organization
+   ------------
+   1. Typography
+   2. Spacing
+   3. Sizing
+   4. Border
+   5. Colors
+   6. Placeholder
+   7. Focus
+   8. Disabled
+   9. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --input-font-family: var(--font-family-base);
+
+    --input-font-size: var(--font-size-base);
+
+    --input-font-weight: var(--font-weight-regular);
+
+    --input-line-height: var(--line-height-normal);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --input-padding-x: var(--space-4);
+
+    --input-padding-y: var(--space-2);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --input-height-sm: var(--size-8);
+
+    --input-height-md: var(--size-10);
+
+    --input-height-lg: var(--size-12);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --input-border-width: 1px;
+
+    --input-border-style: solid;
+
+    --input-border-radius: var(--radius-md);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --input-background: var(--color-surface);
+
+    --input-color: var(--color-text-primary);
+
+    --input-border-color: var(--color-border);
+
+    /* ======================================================================
+       Placeholder
+       ====================================================================== */
+
+    --input-placeholder-color: var(--color-text-muted);
+
+    /* ======================================================================
+       Focus
+       ====================================================================== */
+
+    --input-focus-border-color: var(--color-border-focus);
+
+    --input-focus-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Disabled
+       ====================================================================== */
+
+    --input-disabled-background: var(--color-surface-secondary);
+
+    --input-disabled-color: var(--color-text-disabled);
+
+    --input-disabled-border-color: var(--color-border);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --input-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Input Tokens define only the visual contract.
+|
+| - Validation colors belong to semantic tokens.
+|
+| - Component logic belongs to Input.vue.
+|
+| - Reuse sizing, spacing and motion tokens whenever possible.
+|
+*/

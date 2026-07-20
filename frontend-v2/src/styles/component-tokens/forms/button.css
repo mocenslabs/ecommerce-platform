@@ -1,0 +1,205 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   button.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Button component.
+|
+| Rules:
+|
+| - This file defines ONLY Component Tokens.
+| - This file must NEVER contain CSS classes.
+| - This file must NEVER contain component implementation.
+| - Tokens consume Foundation and Semantic Tokens.
+| - Vue components consume Button Tokens.
+|
+| Notes:
+|
+| The Button is one of the most reused components in the
+| application. Any visual decision should be exposed through
+| Component Tokens whenever possible.
+|
+*/
+
+/* ==========================================================================
+   Button Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Button component.
+
+   Organization
+   ------------
+   1. Typography
+   2. Spacing
+   3. Sizing
+   4. Border
+   5. Elevation
+   6. Motion
+   7. Primary Variant
+   8. Secondary Variant
+   9. Success Variant
+   10. Warning Variant
+   11. Danger Variant
+   12. Disabled State
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --button-font-family: var(--font-family-base);
+
+    --button-font-size: var(--font-size-base);
+
+    --button-font-weight: var(--font-weight-medium);
+
+    --button-line-height: var(--line-height-normal);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --button-padding-x: var(--space-4);
+
+    --button-padding-y: var(--space-2);
+
+    --button-gap: var(--space-2);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --button-height-sm: 2rem;
+
+    --button-height-md: 2.5rem;
+
+    --button-height-lg: 3rem;
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --button-border-width: 1px;
+
+    --button-border-style: solid;
+
+    --button-radius: var(--radius-md);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --button-shadow: var(--shadow-sm);
+
+    --button-shadow-hover: var(--shadow-md);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --button-transition: var(--transition-fast);
+
+    /* ======================================================================
+       Primary Variant
+       ====================================================================== */
+
+    --button-primary-background: var(--color-primary);
+
+    --button-primary-background-hover: var(--color-primary-hover);
+
+    --button-primary-background-active: var(--color-primary-active);
+
+    --button-primary-color: var(--color-text-inverse);
+
+    --button-primary-border: transparent;
+
+    /* ======================================================================
+       Secondary Variant
+       ====================================================================== */
+
+    --button-secondary-background: transparent;
+
+    --button-secondary-background-hover: var(--color-background-alt);
+
+    --button-secondary-background-active: var(--color-surface-secondary);
+
+    --button-secondary-color: var(--color-primary);
+
+    --button-secondary-border: var(--color-border);
+
+    /* ======================================================================
+       Success Variant
+       ====================================================================== */
+
+    --button-success-background: var(--color-success);
+
+    --button-success-color: var(--color-text-inverse);
+
+    --button-success-border: transparent;
+
+    /* ======================================================================
+       Warning Variant
+       ====================================================================== */
+
+    --button-warning-background: var(--color-warning);
+
+    --button-warning-color: var(--color-text-primary);
+
+    --button-warning-border: transparent;
+
+    /* ======================================================================
+       Danger Variant
+       ====================================================================== */
+
+    --button-danger-background: var(--color-danger);
+
+    --button-danger-color: var(--color-text-inverse);
+
+    --button-danger-border: transparent;
+
+    /* ======================================================================
+       Disabled State
+       ====================================================================== */
+
+    --button-disabled-background: var(--color-surface-secondary);
+
+    --button-disabled-color: var(--color-text-disabled);
+
+    --button-disabled-border: var(--color-border);
+
+    --button-disabled-opacity: 0.65;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Every configurable visual property should be exposed
+|   through Component Tokens.
+|
+| - Button variants must extend this file instead of defining
+|   hardcoded values inside Vue components.
+|
+| - New variants should follow the existing naming convention.
+|
+| - Avoid creating duplicate tokens that already exist at the
+|   Foundation Layer.
+|
+| - Component implementation belongs exclusively to the
+|   Button Vue component.
+|
+*/

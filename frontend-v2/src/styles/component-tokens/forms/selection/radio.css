@@ -1,0 +1,92 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   radio.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Radio component.
+|
+*/
+
+/* ==========================================================================
+   Radio Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --radio-size-sm: var(--size-4);
+
+    --radio-size-md: var(--size-5);
+
+    --radio-size-lg: var(--size-6);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --radio-border-width: 1px;
+
+    --radio-border-style: solid;
+
+    --radio-border-radius: var(--radius-full);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --radio-background: var(--color-surface);
+
+    --radio-border-color: var(--color-border);
+
+    --radio-color: var(--color-text-inverse);
+
+    --radio-selected-background: var(--color-primary);
+
+    --radio-selected-border: var(--color-primary);
+
+    /* ======================================================================
+       Focus
+       ====================================================================== */
+
+    --radio-focus-border: var(--color-border-focus);
+
+    --radio-focus-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Disabled
+       ====================================================================== */
+
+    --radio-disabled-background: var(--color-surface-secondary);
+
+    --radio-disabled-border: var(--color-border);
+
+    --radio-disabled-color: var(--color-text-disabled);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --radio-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Radio selection indicator belongs to Radio.vue.
+|
+| - Validation colors consume Semantic Tokens.
+|
+*/

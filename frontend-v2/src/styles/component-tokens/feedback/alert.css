@@ -1,0 +1,153 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   alert.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Alert component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Alert components communicate contextual information to users.
+| They support multiple semantic variants such as success,
+| warning, danger and information.
+|
+*/
+
+/* ==========================================================================
+   Alert Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Alert component.
+
+   Organization
+   ------------
+   1. Typography
+   2. Spacing
+   3. Border
+   4. Elevation
+   5. Motion
+   6. Success Variant
+   7. Warning Variant
+   8. Danger Variant
+   9. Info Variant
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --alert-font-family: var(--font-family-base);
+
+    --alert-font-size: var(--font-size-sm);
+
+    --alert-font-weight: var(--font-weight-medium);
+
+    --alert-line-height: var(--line-height-normal);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --alert-padding-x: var(--space-4);
+
+    --alert-padding-y: var(--space-3);
+
+    --alert-gap: var(--space-3);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --alert-border-width: 1px;
+
+    --alert-border-style: solid;
+
+    --alert-border-radius: var(--radius-md);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --alert-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --alert-transition: var(--transition-fast);
+
+    /* ======================================================================
+       Success Variant
+       ====================================================================== */
+
+    --alert-success-background: var(--color-success-background);
+
+    --alert-success-color: var(--color-success-text);
+
+    --alert-success-border: var(--color-success-border);
+
+    /* ======================================================================
+       Warning Variant
+       ====================================================================== */
+
+    --alert-warning-background: var(--color-warning-background);
+
+    --alert-warning-color: var(--color-warning-text);
+
+    --alert-warning-border: var(--color-warning-border);
+
+    /* ======================================================================
+       Danger Variant
+       ====================================================================== */
+
+    --alert-danger-background: var(--color-danger-background);
+
+    --alert-danger-color: var(--color-danger-text);
+
+    --alert-danger-border: var(--color-danger-border);
+
+    /* ======================================================================
+       Info Variant
+       ====================================================================== */
+
+    --alert-info-background: var(--color-info-background);
+
+    --alert-info-color: var(--color-info-text);
+
+    --alert-info-border: var(--color-info-border);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Alert variants must consume Semantic Tokens.
+|
+| - Never reference Primitive Colors directly.
+|
+| - Icons belong to the component implementation.
+|
+| - Component behavior belongs to Alert.vue.
+|
+*/

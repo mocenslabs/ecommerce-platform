@@ -1,0 +1,153 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   textarea.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Textarea component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Textarea extends the Input component concept while supporting
+| multiline content and configurable resize behavior.
+|
+*/
+
+/* ==========================================================================
+   Textarea Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Textarea component.
+
+   Organization
+   ------------
+   1. Typography
+   2. Spacing
+   3. Sizing
+   4. Border
+   5. Colors
+   6. Placeholder
+   7. Focus
+   8. Disabled
+   9. Resize
+   10. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --textarea-font-family: var(--font-family-base);
+
+    --textarea-font-size: var(--font-size-base);
+
+    --textarea-font-weight: var(--font-weight-regular);
+
+    --textarea-line-height: var(--line-height-normal);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --textarea-padding-x: var(--space-4);
+
+    --textarea-padding-y: var(--space-3);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --textarea-min-height: var(--size-24);
+
+    --textarea-max-height: var(--size-64);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --textarea-border-width: 1px;
+
+    --textarea-border-style: solid;
+
+    --textarea-border-radius: var(--radius-md);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --textarea-background: var(--color-surface);
+
+    --textarea-color: var(--color-text-primary);
+
+    --textarea-border-color: var(--color-border);
+
+    /* ======================================================================
+       Placeholder
+       ====================================================================== */
+
+    --textarea-placeholder-color: var(--color-text-muted);
+
+    /* ======================================================================
+       Focus
+       ====================================================================== */
+
+    --textarea-focus-border-color: var(--color-border-focus);
+
+    --textarea-focus-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Disabled
+       ====================================================================== */
+
+    --textarea-disabled-background: var(--color-surface-secondary);
+
+    --textarea-disabled-color: var(--color-text-disabled);
+
+    --textarea-disabled-border-color: var(--color-border);
+
+    /* ======================================================================
+       Resize
+       ====================================================================== */
+
+    --textarea-resize: vertical;
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --textarea-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Textarea shares the same visual language as Input.
+|
+| - Resize behavior must be configurable through tokens.
+|
+| - Validation styles belong to semantic tokens.
+|
+| - Component logic belongs to Textarea.vue.
+|
+*/
