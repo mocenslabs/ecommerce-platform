@@ -1,0 +1,81 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   pagination.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Pagination component.
+|
+*/
+
+/* ==========================================================================
+   Pagination Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Pagination
+   component.
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --pagination-item-size: var(--size-10);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --pagination-font-size: var(--font-size-sm);
+
+    --pagination-font-weight: var(--font-weight-medium);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --pagination-border-radius: var(--radius-md);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --pagination-background: var(--color-surface);
+
+    --pagination-color: var(--color-text-primary);
+
+    --pagination-border-color: var(--color-border);
+
+    --pagination-active-background: var(--color-primary);
+
+    --pagination-active-color: var(--color-text-inverse);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --pagination-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Active and disabled states should consume Semantic Tokens.
+|
+| - Pagination logic belongs to Pagination.vue.
+|
+*/

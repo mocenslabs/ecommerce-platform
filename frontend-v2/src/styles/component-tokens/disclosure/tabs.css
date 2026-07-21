@@ -1,0 +1,107 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   tabs.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Tabs component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Tabs organize related content into multiple panels while
+| remaining within the current view.
+|
+*/
+
+/* ==========================================================================
+   Tabs Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Tabs
+   component.
+
+   Organization
+   ------------
+   1. Border
+   2. Spacing
+   3. Typography
+   4. Colors
+   5. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --tabs-border-width: 1px;
+
+    --tabs-border-style: solid;
+
+    --tabs-border-color: var(--color-border);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --tabs-gap: var(--space-4);
+
+    --tabs-padding-x: var(--space-4);
+
+    --tabs-padding-y: var(--space-3);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --tabs-font-size: var(--font-size-sm);
+
+    --tabs-font-weight: var(--font-weight-medium);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --tabs-color: var(--color-text-secondary);
+
+    --tabs-active-color: var(--color-primary);
+
+    --tabs-active-border-color: var(--color-primary);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --tabs-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Tabs should reuse Navigation typography whenever possible.
+|
+| - Active state colors must consume Semantic Tokens.
+|
+| - Keyboard navigation belongs to Tabs.vue.
+|
+*/

@@ -1,0 +1,116 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   table.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Table component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Table is the reference implementation for Data Display
+| components.
+|
+*/
+
+/* ==========================================================================
+   Table Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Table
+   component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Spacing
+   4. Typography
+   5. Colors
+   6. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --table-background: var(--color-surface);
+
+    --table-header-background: var(--color-surface-secondary);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --table-border-width: 1px;
+
+    --table-border-style: solid;
+
+    --table-border-color: var(--color-border);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --table-cell-padding-x: var(--space-4);
+
+    --table-cell-padding-y: var(--space-3);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --table-font-size: var(--font-size-sm);
+
+    --table-font-weight: var(--font-weight-normal);
+
+    --table-header-font-weight: var(--font-weight-semibold);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --table-color: var(--color-text-primary);
+
+    --table-header-color: var(--color-text-primary);
+
+    --table-row-hover-background: var(--color-surface-hover);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --table-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Table is the reference implementation for Data Display.
+|
+| - Sorting, filtering and pagination belong to Table.vue.
+|
+| - Hover states should consume Semantic Tokens.
+|
+*/

@@ -1,0 +1,139 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   component-name.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the <Component Name> component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Briefly describe the responsibility of the component.
+|
+*/
+
+/* ==========================================================================
+   <Component Name> Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Describe what this component is responsible for.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Radius
+   4. Elevation
+   5. Sizing
+   6. Spacing
+   7. Typography
+   8. Colors
+   9. Motion
+
+   Remove sections that are not applicable.
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --component-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --component-border-width: 1px;
+
+    --component-border-style: solid;
+
+    --component-border-color: var(--color-border);
+
+    /* ======================================================================
+       Radius
+       ====================================================================== */
+
+    --component-radius: var(--radius-md);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --component-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --component-height: var(--size-10);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --component-padding: var(--space-4);
+
+    --component-gap: var(--space-2);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --component-font-size: var(--font-size-base);
+
+    --component-font-weight: var(--font-weight-medium);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --component-color: var(--color-text-primary);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --component-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| Checklist
+|
+| ✓ Uses Foundation Tokens
+|
+| ✓ Uses Semantic Tokens
+|
+| ✓ No hardcoded colors
+|
+| ✓ No hardcoded spacing
+|
+| ✓ No implementation details
+|
+| ✓ File documented
+|
+| ✓ Naming follows component-token conventions
+|
+*/

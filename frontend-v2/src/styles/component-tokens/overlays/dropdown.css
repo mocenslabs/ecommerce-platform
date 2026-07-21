@@ -1,0 +1,56 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   dropdown.css
+|
+| Layer:
+|   Component Tokens
+|
+*/
+
+/* ==========================================================================
+   Dropdown Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* Background */
+
+    --dropdown-background: var(--color-surface);
+
+    /* Border */
+
+    --dropdown-border-width: 1px;
+
+    --dropdown-border-style: solid;
+
+    --dropdown-border-color: var(--color-border);
+
+    /* Radius */
+
+    --dropdown-radius: var(--radius-lg);
+
+    /* Elevation */
+
+    --dropdown-shadow: var(--shadow-lg);
+
+    /* Sizing */
+
+    --dropdown-min-width: 12rem;
+
+    --dropdown-max-width: 24rem;
+
+    /* Spacing */
+
+    --dropdown-padding: var(--space-2);
+
+    --dropdown-item-padding: var(--space-3);
+
+    /* Motion */
+
+    --dropdown-transition: var(--transition-fast);
+
+}

@@ -1,0 +1,135 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   modal.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Modal component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Modal is the primary overlay component and serves as the
+| visual foundation for other floating surfaces.
+|
+*/
+
+/* ==========================================================================
+   Modal Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Modal
+   component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Radius
+   4. Elevation
+   5. Spacing
+   6. Header
+   7. Body
+   8. Footer
+   9. Backdrop
+   10. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --modal-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --modal-border-width: 1px;
+
+    --modal-border-style: solid;
+
+    --modal-border-color: var(--color-border);
+
+    /* ======================================================================
+       Radius
+       ====================================================================== */
+
+    --modal-radius: var(--radius-xl);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --modal-shadow: var(--shadow-xl);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --modal-padding: var(--space-6);
+
+    --modal-gap: var(--space-5);
+
+    /* ======================================================================
+       Header
+       ====================================================================== */
+
+    --modal-header-gap: var(--space-3);
+
+    /* ======================================================================
+       Body
+       ====================================================================== */
+
+    --modal-body-gap: var(--space-4);
+
+    /* ======================================================================
+       Footer
+       ====================================================================== */
+
+    --modal-footer-gap: var(--space-3);
+
+    /* ======================================================================
+       Backdrop
+       ====================================================================== */
+
+    --modal-backdrop-color: rgb(0 0 0 / 0.50);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --modal-transition: var(--transition-normal);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Modal is the reference implementation for overlay tokens.
+|
+| - Accessibility behavior belongs to Modal.vue.
+|
+| - Focus management, portal rendering and scroll locking
+|   must never be represented as CSS tokens.
+|
+*/

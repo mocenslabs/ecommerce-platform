@@ -1,0 +1,111 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   accordion.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Accordion component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Accordion reveals or hides sections of related content
+| while preserving the current page context.
+|
+*/
+
+/* ==========================================================================
+   Accordion Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Accordion
+   component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Radius
+   4. Spacing
+   5. Typography
+   6. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --accordion-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --accordion-border-width: 1px;
+
+    --accordion-border-style: solid;
+
+    --accordion-border-color: var(--color-border);
+
+    /* ======================================================================
+       Radius
+       ====================================================================== */
+
+    --accordion-radius: var(--radius-md);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --accordion-padding: var(--space-4);
+
+    --accordion-gap: var(--space-3);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --accordion-title-size: var(--font-size-base);
+
+    --accordion-title-weight: var(--font-weight-medium);
+
+    --accordion-content-size: var(--font-size-sm);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --accordion-transition: var(--transition-normal);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Accordion is the reference implementation for
+|   disclosure components.
+|
+| - Expanded/collapsed state belongs to Accordion.vue.
+|
+| - Icons and animations belong to the implementation layer.
+|
+*/

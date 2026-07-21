@@ -1,0 +1,127 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   card.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Card component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Card is the primary persistent surface component used
+| throughout the application.
+|
+| Other surface components should follow the same visual
+| language whenever appropriate.
+|
+*/
+
+/* ==========================================================================
+   Card Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Card component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Radius
+   4. Elevation
+   5. Spacing
+   6. Typography
+   7. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --card-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --card-border-width: 1px;
+
+    --card-border-style: solid;
+
+    --card-border-color: var(--color-border);
+
+    /* ======================================================================
+       Radius
+       ====================================================================== */
+
+    --card-radius: var(--radius-lg);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --card-shadow: var(--shadow-sm);
+
+    --card-shadow-hover: var(--shadow-md);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --card-padding: var(--space-6);
+
+    --card-gap: var(--space-4);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --card-title-size: var(--font-size-lg);
+
+    --card-title-weight: var(--font-weight-semibold);
+
+    --card-text-size: var(--font-size-base);
+
+    --card-text-color: var(--color-text-primary);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --card-transition: var(--transition-normal);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Card should remain presentation-focused.
+|
+| - Interactive behavior belongs to Vue components.
+|
+| - Prefer Semantic Tokens before introducing
+|   Card-specific values.
+|
+| - Card variants should extend these tokens rather than
+|   redefining common properties.
+|
+*/

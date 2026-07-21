@@ -1,0 +1,70 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   drawer.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Drawer component.
+|
+| Notes:
+|
+| Drawer is a directional overlay that slides into view
+| while preserving the application's context.
+|
+*/
+
+/* ==========================================================================
+   Drawer Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* Background */
+
+    --drawer-background: var(--color-surface);
+
+    /* Border */
+
+    --drawer-border-width: 1px;
+
+    --drawer-border-style: solid;
+
+    --drawer-border-color: var(--color-border);
+
+    /* Radius */
+
+    --drawer-radius: var(--radius-xl);
+
+    /* Elevation */
+
+    --drawer-shadow: var(--shadow-xl);
+
+    /* Sizing */
+
+    --drawer-width-sm: 20rem;
+
+    --drawer-width-md: 24rem;
+
+    --drawer-width-lg: 30rem;
+
+    /* Spacing */
+
+    --drawer-padding: var(--space-6);
+
+    --drawer-gap: var(--space-4);
+
+    /* Backdrop */
+
+    --drawer-backdrop-color: rgb(0 0 0 / 0.50);
+
+    /* Motion */
+
+    --drawer-transition: var(--transition-normal);
+
+}

@@ -1,0 +1,83 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   divider.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Divider component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Divider visually separates related content while preserving
+| layout consistency.
+|
+*/
+
+/* ==========================================================================
+   Divider Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Divider
+   component.
+
+   Organization
+   ------------
+   1. Border
+   2. Spacing
+   3. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --divider-width: 1px;
+
+    --divider-style: solid;
+
+    --divider-color: var(--color-border);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --divider-margin: var(--space-6);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --divider-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Divider should remain visually neutral.
+|
+| - Divider never controls layout.
+|
+| - Variants should modify only color when necessary.
+|
+*/

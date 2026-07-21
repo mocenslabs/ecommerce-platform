@@ -1,0 +1,52 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   tooltip.css
+|
+| Layer:
+|   Component Tokens
+|
+*/
+
+/* ==========================================================================
+   Tooltip Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* Typography */
+
+    --tooltip-font-size: var(--font-size-xs);
+
+    --tooltip-font-weight: var(--font-weight-medium);
+
+    /* Background */
+
+    --tooltip-background: var(--color-surface-inverse);
+
+    /* Colors */
+
+    --tooltip-color: var(--color-text-inverse);
+
+    /* Radius */
+
+    --tooltip-radius: var(--radius-md);
+
+    /* Spacing */
+
+    --tooltip-padding-x: var(--space-2);
+
+    --tooltip-padding-y: var(--space-1);
+
+    /* Elevation */
+
+    --tooltip-shadow: var(--shadow-md);
+
+    /* Motion */
+
+    --tooltip-transition: var(--transition-fast);
+
+}

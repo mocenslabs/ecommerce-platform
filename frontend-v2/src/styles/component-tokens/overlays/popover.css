@@ -1,0 +1,50 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   popover.css
+|
+| Layer:
+|   Component Tokens
+|
+*/
+
+/* ==========================================================================
+   Popover Component Tokens
+   ========================================================================== */
+
+:root {
+
+    /* Background */
+
+    --popover-background: var(--color-surface);
+
+    /* Border */
+
+    --popover-border-width: 1px;
+
+    --popover-border-style: solid;
+
+    --popover-border-color: var(--color-border);
+
+    /* Radius */
+
+    --popover-radius: var(--radius-lg);
+
+    /* Elevation */
+
+    --popover-shadow: var(--shadow-lg);
+
+    /* Spacing */
+
+    --popover-padding: var(--space-4);
+
+    --popover-gap: var(--space-3);
+
+    /* Motion */
+
+    --popover-transition: var(--transition-fast);
+
+}

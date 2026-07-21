@@ -1,0 +1,106 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   paper.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Paper component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Paper represents the most generic persistent surface.
+|
+| It serves as the foundation for higher-level surface
+| components such as Card.
+|
+*/
+
+/* ==========================================================================
+   Paper Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the base visual properties shared by persistent
+   surfaces.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Radius
+   4. Elevation
+   5. Spacing
+   6. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --paper-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --paper-border-width: 1px;
+
+    --paper-border-style: solid;
+
+    --paper-border-color: var(--color-border);
+
+    /* ======================================================================
+       Radius
+       ====================================================================== */
+
+    --paper-radius: var(--radius-lg);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --paper-shadow: var(--shadow-xs);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --paper-padding: var(--space-6);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --paper-transition: var(--transition-normal);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Paper should remain the simplest persistent surface.
+|
+| - Card extends Paper conceptually but owns its own tokens.
+|
+| - Avoid introducing component-specific visual decisions.
+|
+*/

@@ -1,0 +1,126 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   sidebar.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Sidebar component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Sidebar provides secondary or contextual navigation.
+|
+*/
+
+/* ==========================================================================
+   Sidebar Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Sidebar
+   component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Elevation
+   4. Sizing
+   5. Spacing
+   6. Typography
+   7. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --sidebar-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --sidebar-border-width: 1px;
+
+    --sidebar-border-style: solid;
+
+    --sidebar-border-color: var(--color-border);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --sidebar-shadow: var(--shadow-md);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --sidebar-width-sm: 16rem;
+
+    --sidebar-width-md: 18rem;
+
+    --sidebar-width-lg: 20rem;
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --sidebar-padding: var(--space-5);
+
+    --sidebar-gap: var(--space-3);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --sidebar-font-size: var(--font-size-base);
+
+    --sidebar-font-weight: var(--font-weight-medium);
+
+    --sidebar-color: var(--color-text-primary);
+
+    --sidebar-link-color: var(--color-text-secondary);
+
+    --sidebar-link-hover-color: var(--color-primary);
+
+    --sidebar-link-active-color: var(--color-primary);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --sidebar-transition: var(--transition-normal);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Sidebar should reuse Navbar typography whenever possible.
+|
+| - Navigation state colors must consume Semantic Tokens.
+|
+| - Responsive behavior belongs to Sidebar.vue.
+|
+*/

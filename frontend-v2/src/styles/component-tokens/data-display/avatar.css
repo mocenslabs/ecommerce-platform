@@ -1,0 +1,110 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   avatar.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Avatar component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Avatar visually represents a user, organization or entity.
+|
+*/
+
+/* ==========================================================================
+   Avatar Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Avatar
+   component.
+
+   Organization
+   ------------
+   1. Sizing
+   2. Border
+   3. Colors
+   4. Typography
+   5. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --avatar-size-xs: var(--size-6);
+
+    --avatar-size-sm: var(--size-8);
+
+    --avatar-size-md: var(--size-10);
+
+    --avatar-size-lg: var(--size-12);
+
+    --avatar-size-xl: var(--size-16);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --avatar-border-width: 2px;
+
+    --avatar-border-style: solid;
+
+    --avatar-border-color: var(--color-border);
+
+    --avatar-radius: var(--radius-full);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --avatar-background: var(--color-surface-secondary);
+
+    --avatar-color: var(--color-text-primary);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --avatar-font-size: var(--font-size-sm);
+
+    --avatar-font-weight: var(--font-weight-semibold);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --avatar-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Avatar images belong to the component implementation.
+|
+| - Initial generation belongs to Avatar.vue.
+|
+| - Status indicators are separate components.
+|
+*/

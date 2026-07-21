@@ -1,0 +1,123 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   navbar.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Navbar component.
+|
+| Rules:
+|
+| - Defines ONLY Component Tokens.
+| - Must NEVER contain CSS classes.
+| - Must NEVER contain component implementation.
+| - Consumes Foundation and Semantic Tokens.
+|
+| Notes:
+|
+| Navbar provides the primary application navigation.
+|
+*/
+
+/* ==========================================================================
+   Navbar Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines every configurable visual aspect of the Navbar
+   component.
+
+   Organization
+   ------------
+   1. Background
+   2. Border
+   3. Elevation
+   4. Sizing
+   5. Spacing
+   6. Typography
+   7. Motion
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Background
+       ====================================================================== */
+
+    --navbar-background: var(--color-surface);
+
+    /* ======================================================================
+       Border
+       ====================================================================== */
+
+    --navbar-border-width: 1px;
+
+    --navbar-border-style: solid;
+
+    --navbar-border-color: var(--color-border);
+
+    /* ======================================================================
+       Elevation
+       ====================================================================== */
+
+    --navbar-shadow: var(--shadow-sm);
+
+    /* ======================================================================
+       Sizing
+       ====================================================================== */
+
+    --navbar-height: var(--size-16);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --navbar-padding-x: var(--space-6);
+
+    --navbar-padding-y: var(--space-3);
+
+    --navbar-gap: var(--space-6);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --navbar-font-size: var(--font-size-base);
+
+    --navbar-font-weight: var(--font-weight-medium);
+
+    --navbar-color: var(--color-text-primary);
+
+    --navbar-link-color: var(--color-text-secondary);
+
+    --navbar-link-hover-color: var(--color-primary);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --navbar-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Navbar is the reference implementation for navigation
+|   components.
+|
+| - Navigation behavior belongs to Vue components.
+|
+| - Routing should never be represented as CSS tokens.
+|
+*/

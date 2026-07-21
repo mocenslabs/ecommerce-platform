@@ -7,22 +7,17 @@
 |   index.css
 |
 | Layer:
-|   Forms Component Tokens
+|   Disclosure Component Tokens
 |
 | Responsibility:
-|   Imports all Form Component Token files.
+|   Imports all Disclosure Component Token files.
 |
 */
 
 /* ==========================================================================
-   Form Components
+   Disclosure Components
    ========================================================================== */
-@import "./button.css";
-@import "./input.css";
 
-@import "./controls/textarea.css";
-@import "./controls/select.css";
+@import "./accordion.css";
 
-@import "./selection/checkbox.css";
-@import "./selection/radio.css";
-@import "./selection/switch.css";
+@import "./tabs.css";

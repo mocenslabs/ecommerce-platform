@@ -1,0 +1,70 @@
+/*
+|--------------------------------------------------------------------------
+| Premium E-commerce Platform
+|--------------------------------------------------------------------------
+|
+| File:
+|   breadcrumb.css
+|
+| Layer:
+|   Component Tokens
+|
+| Responsibility:
+|   Defines the visual contract for the Breadcrumb component.
+|
+*/
+
+/* ==========================================================================
+   Breadcrumb Component Tokens
+   ==========================================================================
+
+   Purpose
+   -------
+   Defines the visual language of breadcrumb navigation.
+
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --breadcrumb-font-size: var(--font-size-sm);
+
+    --breadcrumb-font-weight: var(--font-weight-medium);
+
+    /* ======================================================================
+       Colors
+       ====================================================================== */
+
+    --breadcrumb-color: var(--color-text-secondary);
+
+    --breadcrumb-active-color: var(--color-text-primary);
+
+    --breadcrumb-separator-color: var(--color-border);
+
+    /* ======================================================================
+       Spacing
+       ====================================================================== */
+
+    --breadcrumb-gap: var(--space-2);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --breadcrumb-transition: var(--transition-fast);
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Maintenance Notes
+|--------------------------------------------------------------------------
+|
+| - Breadcrumb should remain visually lightweight.
+|
+| - Separators belong to the component implementation.
+|
+*/

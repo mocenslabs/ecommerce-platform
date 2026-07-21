@@ -1,47 +1,38 @@
-/*
-|--------------------------------------------------------------------------
-| Premium E-commerce Platform
-|--------------------------------------------------------------------------
-|
-| Global Styles Entry Point
-|
-| Import order matters.
-|
-*/
-
 /* ==========================================================================
    Base
    ========================================================================== */
 
 @import "./base/reset.css";
-@import "./base/base.css";
 @import "./base/typography.css";
+@import "./base/base.css";
 @import "./base/accessibility.css";
 
 /* ==========================================================================
    Design Tokens
    ========================================================================== */
 
-@import "./tokens/colors.css";
-@import "./tokens/spacing.css";
-@import "./tokens/typography.css";
-@import "./tokens/radius.css";
-@import "./tokens/elevation.css";
-@import "./tokens/motion.css";
-@import "./tokens/breakpoints.css";
-@import "./tokens/z-index.css";
+@import "./tokens/index.css";
 
 /* ==========================================================================
    Themes
    ========================================================================== */
 
-@import "./themes/light.css";
-@import "./themes/dark.css";
+@import "./themes/index.css";
+
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+
+@import "./helpers/index.css";
 
 /* ==========================================================================
    Utilities
    ========================================================================== */
 
-@import "./utilities/helpers.css";
-@import "./utilities/layout.css";
-@import "./utilities/animations.css";
+@import "./utilities/index.css";
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+@import "./component-tokens/index.css";
